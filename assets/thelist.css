@@ -10,22 +10,31 @@
 7. Effects
 -------------------------------------------------------------------*/
 
-
+@import url(css/fonts/stylesheet-hanson.css);
+@import url(css/fonts/stylesheet-fk-raster.css);
 
 /*------------------------------------------------------------------
 [1. General styles]
 */
 
 body, html { padding:0; margin:0; width:100%; height:100%; }
-body { font-size:1vw; color:#FFF;min-width:300px; min-height:300px; font-family: 'Roboto Mono', monospace; font-weight:400; transition:.5s background ease; position:absolute; top:0; left:0; width:100%; height:100%;  overflow-y:scroll;}
+body { font-size:1vw; color:#FFF;min-width:300px; min-height:300px; font-family: 'Roboto Mono', Arial, sans-serif, monospace; font-weight:400; transition:.5s background ease; position:absolute; top:0; left:0; width:100%; height:100%;  overflow-y:scroll;}
 
-h1 { letter-spacing:.5vw; font-family:'Titillium Web'; line-height:2.8vw; font-size:3vw; font-weight:900; color:#fff; text-transform:uppercase;  }
+h1 { letter-spacing:.5vw; font-family:'Titillium Web', Helvetica, Arial, sans-serif; line-height:2.8vw; font-size:3vw; font-weight:900; color:#fff; text-transform:uppercase;  }
 h2 { letter-spacing:.5vw; font-family:'Titillium Web'; line-height:8vw; padding-left:0; margin: .3em 0 .5em; position:relative; font-size:9vw; font-weight:900; color:transparent; text-transform:uppercase; text-stroke:.2vw #000; -webkit-text-stroke:.2vw #000; }
 h2 span { transition:1s color ease; display:inline-block;} 
 h2 span.Active { color:#000; transition:.3s color ease; } 
 h3 { font-size:3vw; font-weight:400; }
 
 .Page { display:block;}
+
+.hanson-font{
+	font-family: 'Hanson', Helvetica, Arial, sans-serif;
+}
+
+.fkroaster-font{
+	font-family: 'FK-roaster', Monaco, Arial, sans-serif;
+}
 
 /*------------------------------------------------------------------
 [2. The list nav]
@@ -100,11 +109,11 @@ h3 { font-size:3vw; font-weight:400; }
 .marquee span {
   display: inline-block;
   padding-left: 100%;
-  animation: marquee 7s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 .marquee2 span {
-  animation-delay: 0s;
+  animation-delay: 2s;
 }
 
 @keyframes marquee {
