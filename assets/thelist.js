@@ -226,3 +226,5 @@ jQuery(function($) {
 		}, 200);
 	}
 });
+
+ AOS.init();
