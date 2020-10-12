@@ -1,40 +1,26 @@
-<div id="gifs-content">
+<div class="sub-page-content" id="gifs-ganadores-2019">
     <h2>
         <div>Ganadores 2019</div>
     </h2>
-    <h3>
-        <div>Concurso de Gifs</div>
-    </h3>
+
     <div class="block-section">
         <div class="row">
-            <div class="gif-item">
+                <h3 class="outline-title">Concurso de Gifs</h3>
+        </div>
+        <div class="row grid-view">
+            <div class="gif-item giftem1" data-aos="flip-left">
                 <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
             </div>
-            <div class="gif-item">
+            <div class="gif-item giftem2" data-aos="flip-right">
                 <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
             </div>
-            <div class="gif-item">
+            <div class="gif-item giftem3" data-aos="flip-left">
                 <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
             </div>
-            <div class="gif-item">
+            <div class="gif-item giftem4" data-aos="flip-right">
                 <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
             </div>
-            <div class="gif-item">
-                <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
-            </div>
-            <div class="gif-item">
-                <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
-            </div>
-            <div class="gif-item">
-                <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
-            </div>
-            <div class="gif-item">
-                <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
-            </div>
-            <div class="gif-item">
-                <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
-            </div>
-            <div class="gif-item">
+            <div class="gif-item giftem5" data-aos="flip-left">
                 <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
             </div>
         </div>
@@ -48,3 +34,25 @@
         <li><a href="#/ganadores-2020">Selección 2020</a> <span>X</span></li>
     </ul>
 </div>
+<script type="text/javascript">
+    AOS.init();
+
+    setTimeout(function() {
+
+        $('.giftem1, .giftem2').each(function() {
+            $(this).addClass('flip-this');
+            AOS.refreshHard
+        });
+
+
+    }, 500);
+
+$('#Subpage').on('scroll',AOS.refreshHard);
+
+$('.gif-item').each(function() {
+    $(this).on('scroll',AOS.refreshHard);
+});
+
+
+
+</script>
