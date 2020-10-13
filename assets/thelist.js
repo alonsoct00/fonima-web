@@ -69,8 +69,10 @@ jQuery(function($) {
             $Subpage.find('h2 > div > span:not(.Active)').eq(Math.floor(Math.random() * $Subpage.find('h2 > div > span:not(.Active)').size())).addClass('Active');
             if (!$Subpage.find('h2 > div > span:not(.Active)').size()) { window.clearInterval(Interval); }
         }, 200);
-
-        AOS.init();
+        $('h2 > span').each(function(){
+		    var $elem = $(this);
+		    $elem.html($elem.text().replace(/\s+/, ''));
+		});
     }
 
     function _bgSubPage() {
@@ -95,7 +97,6 @@ jQuery(function($) {
                         });
                         var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
         				$Subpage.addClass($Subpageid);
-        				
                     });
                 });
             } else {
@@ -107,7 +108,6 @@ jQuery(function($) {
                     });
                     var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
                     $Subpage.addClass($Subpageid);
-                    
                 });
                 $Border.addClass('Faded');
                 $UI.addClass('Dark');
@@ -172,7 +172,6 @@ jQuery(function($) {
                             var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
         					$Subpage.addClass($Subpageid);
         					_bgSubPage();
-        					
                         });
                     });
                 } else {
@@ -184,7 +183,6 @@ jQuery(function($) {
                         });
                         var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
         				$Subpage.addClass($Subpageid);
-        				
                     });
                     $Border.addClass('Faded');
                     $UI.addClass('Dark');
@@ -200,7 +198,6 @@ jQuery(function($) {
                         });
                         _HeaderAnim();
                         _bgSubPage();
-
                     }, 900);
                 }
                 return false;
@@ -225,6 +222,11 @@ jQuery(function($) {
             });
             return false;
 
+        });
+
+        $('.HomeUi___Menu li a').on('click', function() {
+        	var $Subpageid = $('.sub-page-content').prop('id');
+            $Subpage.removeClass($Subpageid);
         });
 
 
@@ -272,3 +274,7 @@ jQuery(function($) {
         }, 200);
     }
 });
+
+
+
+AOS.init();
