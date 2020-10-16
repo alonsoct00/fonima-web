@@ -122,15 +122,15 @@ h3 {
     font-family: 'IBM Plex Mono', monospace !important;
 }
 
-.title,
-h1 {
+.fonima-web-page .title,
+.fonima-web-page h1 {
     font-size: 70px;
     font-size: 7rem;
     font-family: 'Hanson', Helvetica, Arial, sans-serif;
 }
 
-.subtitle,
-h2 {
+.fonima-web-page .subtitle,
+.fonima-web-page h2 {
     font-size: 42px;
     font-size: 4.2rem;
     font-family: 'Hanson', Helvetica, Arial, sans-serif;
@@ -712,402 +712,6 @@ a.btn.btn-ouline:focus {
 }
 
 
-/*-------------------------Custom Styles--------------*/
-
-.marquee-container {
-    position: fixed;
-    width: 100%;
-    top: 48px;
-}
-
-.marquee {
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    position: absolute;
-    width: 81%;
-}
-
-.marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 120s linear infinite;
-    font-family: 'FK-roaster', Monaco, Arial, sans-serif;
-    font-size: 27px;
-    font-size: 2.7rem;
-    color: #000;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-}
-
-.marquee2 span {
-    animation-delay: 2s;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translate(-100%, 0);
-    }
-
-    100% {
-        transform: translate(0%, 0);
-    }
-}
-
-.flip-this {
-    -webkit-animation: flip 1s;
-    animation: flip 1s;
-}
-
-@-webkit-keyframes flip {
-    from {
-        transform: rotateY(90deg)
-    }
-
-    to {
-        transform: rotateY(0deg)
-    }
-}
-
-@keyframes flip {
-    from {
-        transform: rotateY(90deg)
-    }
-
-    to {
-        transform: rotateY(0deg)
-    }
-}
-
-.footer-fonca p {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: #000;
-    text-align: center;
-}
-
-.footer-logo-img {
-    width: 75%;
-    clear: both;
-    display: block;
-    margin: 0px auto;
-}
-
-
-.sub-page-content p {
-    font-size: 14px;
-    font-size: 1.4rem;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-
-.sub-page-content .block-section {
-    display: block;
-    clear: both;
-    margin-bottom: 40px;
-}
-
-.block-section .row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.block-section .row .col-item {
-    display: flex;
-    flex: 0 0 50%;
-}
-
-.block-section .row .col-item .col-img {
-    width: 100%;
-    display: inline-flex;
-    flex: 0 0 50%;
-    max-width: 50%;
-    max-height: 160px;
-}
-
-.block-section .row .col-item .col-img img,
-.block-section .row .col-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-
-.block-section .col-item .col-text {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 0 0 50%;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-
-.block-section .col-item .col-text h4 {
-    text-transform: uppercase;
-    margin-top: 0px;
-}
-
-#Subpage .sub-page-content h2.title-icon {
-    display: flex;
-    align-items: normal;
-}
-
-#Subpage #subpage-menu-content {
-    position: fixed;
-    right: 4%;
-    bottom: 120px;
-    text-align: right;
-    opacity: 1;
-    color: #000;
-}
-
-#Subpage #subpage-menu-content a {
-    opacity: 1;
-    color: #000;
-}
-
-
-#about-content .block-section#about-integrantes .col-item {
-    flex: 0 0 48%;
-    margin-right: 16px;
-}
-
-#about-integrantes>div>div:nth-child(2) {
-    margin: 0px !important;
-}
-
-#about-content .block-section#about-integrantes .row .col-item .col-img {
-    width: 100%;
-    display: inline-flex;
-    flex: 0 0 50%;
-    max-width: 45%;
-    max-height: 160px;
-    margin-right: 16px;
-    flex-shrink: 0;
-}
-
-#about-content .block-section#about-colaboradores .row {
-    align-items: normal;
-    justify-content: space-between;
-    width: 100%;
-}
-
-#about-content .block-section#about-colaboradores .col-item {
-    flex: 0 0 33.33%;
-    max-width: 30%;
-}
-
-#about-colaboradores>div>div:nth-child(3) {
-    position: relative;
-    bottom: 24px;
-}
-
-
-#about-content .block-section#about-aliados .col-item {
-    flex: 0 0 33.33%;
-    max-width: 30%;
-}
-
-#about-content .link-year {
-    display: inline-block;
-    margin-right: 48px;
-}
-
-
-#programacion-content .block-section#prog-wrapper .row {
-    align-items: normal;
-    justify-content: space-between;
-    width: 100%;
-}
-
-#programacion-content .block-section#prog-wrapper .col-item {
-    flex: 0 0 33.33%;
-    max-width: 30%;
-    background-size: contain;
-    -webkit-transition: all .2s ease-in-out,
-        -webkit-transform .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
-#programacion-content .block-section#prog-wrapper .col-item:hover,
-#programacion-content .block-section#prog-wrapper .col-item:focus {
-    opacity: .9;
-    -webkit-transform: scale(1.045);
-    transform: scale(1.045);
-}
-
-#programacion-content .block-section#prog-wrapper .col-item a {
-    width: 100%;
-    min-height: 240px;
-    display: block;
-    margin: 0px auto;
-    text-indent: -99999px
-}
-
-#programacion-content .block-section#prog-wrapper .col-item #prog-bc {
-    background: transparent url("images/botones/programacion/BC-boton.png") no-repeat center center / contain;
-}
-
-#programacion-content .block-section#prog-wrapper .col-item #prog-cdmx {
-    background: transparent url("images/botones/programacion/CDMX-boton.png") no-repeat center center / contain;
-}
-
-#programacion-content .block-section#prog-wrapper .col-item #prog-trc {
-    background: transparent url("images/botones/programacion/TRC-boton.png") no-repeat center center / contain;
-}
-
-.sub-programacion .prog-title-img {
-    width: 40px;
-    display: inline-block;
-}
-
-.sub-programacion .main-content .content-info h3 {
-    text-transform: uppercase;
-}
-
-.sub-programacion .main-content .content-info h4 {
-    text-transform: uppercase;
-}
-
-
-
-#gifs-content .block-section#gifs-wrapper .row {
-    align-items: normal;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-#gifs-content .block-section#gifs-wrapper .col-item {
-    flex: 0 0 33.33%;
-    max-width: 30%;
-    background-size: contain;
-    -webkit-transition: all .2s ease-in-out,
-        -webkit-transform .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
-#gifs-content .block-section#gifs-wrapper .col-item:hover,
-#gifs-content .block-section#gifs-wrapper .col-item:focus {
-    opacity: .9;
-    -webkit-transform: scale(1.045);
-    transform: scale(1.045);
-}
-
-#gifs-content .block-section#gifs-wrapper .col-item .img-item {
-    width: 100%;
-}
-
-#gifs-content .block-section#gifs-wrapper .col-item a {
-    width: 100%;
-    min-height: 240px;
-    display: block;
-    margin: 0px auto;
-    text-indent: -99999px
-}
-
-.gifs-video-wrapper {
-    width: 100%;
-}
-
-.gifs-video-wrapper .gif-item {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-}
-
-.gifs-video-wrapper .gif-item img {
-    width: 100%;
-    height: auto;
-}
-
-.gifs-video-wrapper.grid-view {
-    display: grid;
-    gap: 24px 20px;
-    grid-template-areas:
-        "even-item even-item . ."
-        ". . odd-item odd-item";
-}
-
-.gifs-video-wrapper.grid-view .even-item {
-    grid-area: even-item;
-    position: relative;
-}
-
-.gifs-video-wrapper.grid-view .odd-item {
-    grid-area: odd-item;
-    position: relative;
-    bottom: 40px;
-}
-
-
-
-#gifs-bases-2020 #bases2020-text {
-    padding-left: 40px;
-}
-
-
-#conciertos-content .lineup-info .lineup {
-    list-style: none;
-    padding: 0px;
-}
-
-#conciertos-content .lineup-info .lineup li {
-    font-size: 20px;
-    font-size: 2.0rem;
-    padding-left: 0px;
-    padding-bottom: 8px;
-    margin-bottom: 14px;
-    border-bottom: 1.5px solid #000;
-    text-transform: uppercase;
-}
-
-
-#conciertos-content .team-item {
-    display: flex;
-    margin-bottom: 32px;
-}
-
-#conciertos-content .team-bio {
-    display: inline-flex;
-    flex-direction: column;
-    background: #fff;
-    padding: 0px 24px;
-    margin-left: 8px;
-}
-
-#conciertos-content .team-bio h4 {
-    line-height: normal;
-    margin-bottom: 0px;
-}
-
-#conciertos-content .team-bio h4 span{
-	font-size: 14px;
-	font-size: 1.4rem;
-	font-weight: normal;
-}
-
-
-#conciertos-content .team-item .img-bio {
-    background: #fff;
-    width: 110px;
-    height: 110px;
-    border-radius: 100px;
-    display: inline-flex;
-    text-align: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-#conciertos-content .team-item .img-bio img {
-    width: 100%;
-    height: auto;
-    border-radius: 100px;
-}
-
-
 /*------------------------------------------------------------------
 [6. Mobile breakpoint]
 */
@@ -1165,7 +769,7 @@ a.btn.btn-ouline:focus {
     }
 
     .HomeUi.Subsection .HomeUi__Header {
-        background: #FFF;
+        background: transparent;
         transition-delay: .3s;
         transform: scale(0.5);
     }
@@ -1371,4 +975,672 @@ a.btn.btn-ouline:focus {
     height: 100%;
     background: url(noise.gif);
     opacity: 0.05;
+}
+
+
+
+/*-------------------------Custom Styles--------------*/
+
+.marquee-container {
+    position: fixed;
+    width: 100%;
+    top: 48px;
+}
+
+.marquee {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    width: 81%;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 120s linear infinite;
+    font-family: 'FK-roaster', Monaco, Arial, sans-serif;
+    font-size: 27px;
+    font-size: 2.7rem;
+    color: #000;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+}
+
+.marquee2 span {
+    animation-delay: 2s;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        transform: translate(0%, 0);
+    }
+}
+
+.flip-this {
+    -webkit-animation: flip 1s;
+    animation: flip 1s;
+}
+
+@-webkit-keyframes flip {
+    from {
+        transform: rotateY(90deg)
+    }
+
+    to {
+        transform: rotateY(0deg)
+    }
+}
+
+@keyframes flip {
+    from {
+        transform: rotateY(90deg)
+    }
+
+    to {
+        transform: rotateY(0deg)
+    }
+}
+
+.footer-fonca p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #000;
+    text-align: center;
+}
+
+.footer-logo-img {
+    width: 75%;
+    clear: both;
+    display: block;
+    margin: 0px auto;
+}
+
+
+.sub-page-content p {
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+
+.sub-page-content .block-section {
+    display: block;
+    clear: both;
+    margin-bottom: 40px;
+}
+
+.block-section .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block-section .row .col-item {
+    display: flex;
+    flex: 0 0 50%;
+}
+
+.block-section .row .col-item .col-img {
+    width: 100%;
+    display: inline-flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    max-height: 160px;
+}
+
+.block-section .row .col-item .col-img img,
+.block-section .row .col-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.block-section .col-item .col-text {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 0 0 50%;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.block-section .col-item .col-text h4 {
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+
+#Subpage .sub-page-content h2.title-icon {
+    display: flex;
+    align-items: normal;
+}
+
+#Subpage #subpage-menu-content {
+    position: fixed;
+    right: 4%;
+    bottom: 120px;
+    text-align: right;
+    opacity: 1;
+    color: #000;
+}
+
+#Subpage #subpage-menu-content a {
+    opacity: 1;
+    color: #000;
+}
+
+
+
+#about-content .block-section#about-integrantes .col-item {
+    flex: 0 0 48%;
+    margin-right: 16px;
+}
+
+#about-integrantes>div>div:nth-child(2) {
+    margin: 0px !important;
+}
+
+#about-content .block-section#about-integrantes .row .col-item .col-img {
+    width: 100%;
+    display: inline-flex;
+    flex: 0 0 50%;
+    max-width: 45%;
+    max-height: 160px;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+#about-content .block-section#about-colaboradores .row {
+    align-items: normal;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#about-content .block-section#about-colaboradores .col-item {
+    flex: 0 0 33.33%;
+    max-width: 30%;
+}
+
+#about-colaboradores>div>div:nth-child(3) {
+    position: relative;
+    bottom: 24px;
+}
+
+
+#about-content .block-section#about-aliados .col-item {
+    flex: 0 0 33.33%;
+    max-width: 30%;
+}
+
+#about-content .link-year {
+    display: inline-block;
+    margin-right: 48px;
+}
+
+
+#programacion-content .block-section#prog-wrapper .row {
+    align-items: normal;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#programacion-content .block-section#prog-wrapper .col-item {
+    flex: 0 0 33.33%;
+    max-width: 30%;
+    background-size: contain;
+    -webkit-transition: all .2s ease-in-out,
+        -webkit-transform .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+#programacion-content .block-section#prog-wrapper .col-item:hover,
+#programacion-content .block-section#prog-wrapper .col-item:focus {
+    opacity: .9;
+    -webkit-transform: scale(1.045);
+    transform: scale(1.045);
+}
+
+#programacion-content .block-section#prog-wrapper .col-item a {
+    width: 100%;
+    min-height: 240px;
+    display: block;
+    margin: 0px auto;
+    text-indent: -99999px
+}
+
+#programacion-content .block-section#prog-wrapper .col-item #prog-bc {
+    background: transparent url("images/botones/programacion/BC-boton.png") no-repeat center center / contain;
+}
+
+#programacion-content .block-section#prog-wrapper .col-item #prog-cdmx {
+    background: transparent url("images/botones/programacion/CDMX-boton.png") no-repeat center center / contain;
+}
+
+#programacion-content .block-section#prog-wrapper .col-item #prog-trc {
+    background: transparent url("images/botones/programacion/TRC-boton.png") no-repeat center center / contain;
+}
+
+
+#programacion-content .footer-info .ct-btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+
+.sub-programacion .prog-title-img {
+    width: 40px;
+    display: inline-block;
+}
+
+.sub-programacion .main-content .content-info h3 {
+    text-transform: uppercase;
+}
+
+.sub-programacion .main-content .content-info h4 {
+    text-transform: uppercase;
+}
+
+
+
+#gifs-content .block-section#gifs-wrapper .row {
+    align-items: normal;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#gifs-content .block-section#gifs-wrapper .col-item {
+    flex: 0 0 33.33%;
+    max-width: 30%;
+    background-size: contain;
+    -webkit-transition: all .2s ease-in-out,
+        -webkit-transform .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+#gifs-content .block-section#gifs-wrapper .col-item:hover,
+#gifs-content .block-section#gifs-wrapper .col-item:focus {
+    opacity: .9;
+    -webkit-transform: scale(1.045);
+    transform: scale(1.045);
+}
+
+#gifs-content .block-section#gifs-wrapper .col-item .img-item {
+    width: 100%;
+}
+
+#gifs-content .block-section#gifs-wrapper .col-item a {
+    width: 100%;
+    min-height: 240px;
+    display: block;
+    margin: 0px auto;
+    text-indent: -99999px
+}
+
+.gifs-video-wrapper {
+    width: 100%;
+}
+
+.gifs-video-wrapper .gif-item {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.gifs-video-wrapper .gif-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gifs-video-wrapper.grid-view {
+    display: grid;
+    gap: 24px 20px;
+    grid-template-areas:
+        "even-item even-item . ."
+        ". . odd-item odd-item";
+}
+
+.gifs-video-wrapper.grid-view .even-item {
+    grid-area: even-item;
+    position: relative;
+}
+
+.gifs-video-wrapper.grid-view .odd-item {
+    grid-area: odd-item;
+    position: relative;
+    bottom: 40px;
+}
+
+
+
+#gifs-bases-2020 #bases2020-text {
+    padding-left: 40px;
+}
+
+
+#conciertos-content .lineup-info .lineup {
+    list-style: none;
+    padding: 0px;
+}
+
+#conciertos-content .lineup-info .lineup li {
+    font-size: 20px;
+    font-size: 2.0rem;
+    padding-left: 0px;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+    border-bottom: 1.5px solid #000;
+    text-transform: uppercase;
+}
+
+
+#conciertos-content .team-item {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+#conciertos-content .team-bio {
+    display: inline-flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 0px 24px;
+    margin-left: 8px;
+}
+
+#conciertos-content .team-bio h4 {
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+#conciertos-content .team-bio h4 span {
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+
+#conciertos-content .team-item .img-bio {
+    background: #fff;
+    width: 110px;
+    height: 110px;
+    border-radius: 100px;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#conciertos-content .team-item .img-bio img {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+}
+
+
+@media (min-width:768px) and (max-width:1100px) {}
+
+
+@media (max-width:767px) {
+    .fonima-web-page .fonima-ui-custom .TheList__Wrapper {
+        padding-bottom: 2vw;
+        padding-right: 0px;
+        padding-top: 140px;
+    }
+
+    .fonima-web-page .fonima-ui-custom .TheList .TheList__Title {
+        font-size: 40px;
+        font-size: 4rem;
+        line-height: normal;
+    }
+
+    .fonima-web-page .TheList .TheList__Title {
+        margin-left: 0;
+        padding-left: 0;
+        overflow-wrap: break-word;
+        width: 100%;
+        word-break: break-all;
+    }
+
+    .fonima-web-page .TheList__List {
+        width: 100%;
+        max-width: 95% !important;
+        overflow-x: hidden;
+    }
+
+    .fonima-web-page .TheList li{
+    	width: 100%;
+    	max-width: 100% !important;
+    }
+
+    .footer-fonca {
+        display: block;
+        clear: both;
+        width: 90%;
+        right: auto;
+        position: relative;
+        float: right;
+    }
+
+    .HomeUi__Header {
+        top: 10vw;
+    }
+
+    .marquee-container {
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    .marquee {
+        margin: 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+    }
+
+    #Subpage #subpage-menu-content {
+        position: fixed;
+        right: 0;
+        bottom: 0px;
+        text-align: right;
+        opacity: 1;
+        color: #000;
+        background: #ffffff9c;
+        padding: 10px 10px;
+        display: none;
+    }
+
+    .fonima-web-page .Subpage__Content {
+        padding: 24vw 5vw 10vw 10vw;
+        width: 100%;
+        box-sizing: border-box;
+        float: none;
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    .fonima-web-page .Subpage__Close {
+        left: 10px;
+        font-size: 20px;
+        font-size: 2rem;
+    }
+
+    .fonima-web-page h3.outline-title div {
+        text-overflow: ellipsis;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .fonima-web-page .col-text h4 {
+        margin-bottom: 4px;
+    }
+
+    .fonima-web-page .sub-page-content .block-section .main-content {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .fonima-web-page .sub-page-content .block-section .ct-btn .btn-ouline {
+        margin-bottom: 20px;
+    }
+
+    .fonima-web-page .sub-page-content .block-section .main-content .content-info h3,
+    .fonima-web-page .sub-page-content .block-section .main-content .content-info h4 {
+        word-break: break-word;
+        text-transform: uppercase;
+        text-overflow: clip;
+        overflow-wrap: break-word;
+        white-space: break-spaces;
+    }
+
+    #about-content .block-section#about-integrantes .col-item {
+        flex: 0 0 100%;
+        margin-right: 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+    }
+
+    #about-content .block-section#about-integrantes .row .col-item .col-img {
+        width: 100%;
+        display: block;
+        flex: 0 0 50%;
+        max-width: 100%;
+        max-height: none;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        flex-shrink: 0;
+    }
+
+    #about-content .block-section#about-colaboradores .col-item {
+        flex: 0 0 100%;
+        max-width: 80%;
+        display: block;
+        margin: 0px 0px 20px 0px;
+    }
+
+    #about-content .block-section#about-aliados .col-item {
+        flex: 0 0 auto;
+        max-width: 80%;
+        display: block;
+    }
+
+    #about-content .link-year {
+        display: block;
+        clear: both;
+        margin: 0px 0px 24px 0px;
+    }
+
+
+    #programacion-content .block-section#prog-wrapper .col-item {
+        flex: 0 0 auto;
+        max-width: 100%;
+        width: 100%;
+        background-size: contain;
+
+    }
+
+    #programacion-content-bc>h2 {
+        font-size: 35px;
+        font-size: 3.5rem;
+    }
+
+    #programacion-content-bc>h2>div>span:nth-child(5) {
+        width: 150px;
+    }
+
+    #conciertos-content .team-item {
+        display: flex;
+        margin-bottom: 32px;
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #conciertos-content .team-item .img-bio {
+        background: #fff;
+        width: 100%;
+        height: auto;
+        border-radius: 100%;
+        display: block;
+        text-align: center;
+        align-items: center;
+        flex-shrink: initial;
+        margin-bottom: 20px;
+    }
+
+    #conciertos-content .team-item .img-bio img {
+        width: 100%;
+        height: auto;
+        border-radius: 100%;
+    }
+
+    #gifs-content > h2 {
+    	font-size: 40px;
+    	font-size: 4rem;
+	 	text-align: center;
+	}
+
+	#gifs-content .block-section#gifs-wrapper .row {
+	    align-items: normal;
+	    justify-content: center;
+	    width: 100%;
+	    flex-wrap: wrap;
+	    margin-top: 28px;
+	}
+
+	#gifs-content .block-section#gifs-wrapper .col-item {
+	    flex: 0 0 auto;
+	    max-width: 100%;
+	    width: 100%;
+	    background-size: contain;
+	    -webkit-transition: all .2s ease-in-out, -webkit-transform .2s ease-in-out;
+	    transition: all .2s ease-in-out;
+	}
+
+	.gifs-video-wrapper.grid-view {
+	    display: flex;
+	    gap: 0;
+	    grid-template-areas: none;
+	    flex-wrap: wrap;
+	    align-items: center;
+	    justify-content: space-around;
+	    align-content: space-around;
+	    height: 100%;
+	    width: 100%;
+	}
+
+	.gif-item {
+	    grid-area: none;
+	    margin-bottom: 24px;
+	    display: block;
+	    clear: both;
+	    width: 100%;
+	    max-width: 100%;
+	    position: static;
+	    flex: 0 0 100%;
+	}
+
+	.bg-12, .contact-content {
+	    background: var(--bg-gray) url(images/backgrounds/BG-12.png) no-repeat 0px 0px / cover;
+	    background-size: cover;
+	    background-position: bottom center;
+	}
+
+	.bg-9, .gifs-ganadores-2019 {
+	    background: var(--bg-gray) url(images/backgrounds/BG-9.png) no-repeat 0px 0px / cover !important;
+	    background-position: center top !important;
+	}
+
 }
