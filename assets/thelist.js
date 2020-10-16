@@ -78,6 +78,8 @@ jQuery(function($) {
     function _bgSubPage() {
         var $Subpageid = $Subpage.find('.sub-page-content').prop('id');
         $Subpage.addClass($Subpageid);
+
+        _HeaderAnim();
     }
 
     function _DeepLink() {
