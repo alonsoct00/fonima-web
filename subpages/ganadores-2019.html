@@ -1,26 +1,25 @@
 <div class="sub-page-content" id="gifs-ganadores-2019">
     <h2>
-        <div>Ganadores 2019</div>
+        <div>Ganadores  2019</div>
     </h2>
 
     <div class="block-section">
         <div class="row">
                 <h3 class="outline-title">Concurso de Gifs</h3>
         </div>
-        <div class="row grid-view">
-            <div class="gif-item giftem1" data-aos="flip-left">
+        <div class="row grid-view gifs-video-wrapper">
+            <div class="giftem1 gif-item even-item">
                 <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
             </div>
-            <div class="gif-item giftem2" data-aos="flip-right">
+            <div class="giftem2 gif-item odd-item">
                 <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
             </div>
-            <div class="gif-item giftem3" data-aos="flip-left">
+        </div>
+        <div class="row grid-view gifs-video-wrapper">
+            <div class="gif-item even-item" data-aos="flip-left">
                 <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
             </div>
-            <div class="gif-item giftem4" data-aos="flip-right">
-                <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
-            </div>
-            <div class="gif-item giftem5" data-aos="flip-left">
+            <div class="gif-item odd-item" data-aos="flip-right">
                 <img src="https://dummyimage.com/300x200/d4d4d4/000000.gif&text=gif+img" alt="gif-1">
             </div>
         </div>
@@ -31,21 +30,16 @@
     <ul class="HomeUi___Menu">
         <li class="current"><a href="#">Ganadores 2019</a> <span>X</span></li>
         <li><a href="#/bases-2020">Bases 2020</a> <span>X</span></li>
-        <li><a href="#/ganadores-2020">Selección 2020</a> <span>X</span></li>
+        <!--<li><a href="#/ganadores-2020">Selección 2020</a> <span>X</span></li>-->
     </ul>
 </div>
 <script type="text/javascript">
     AOS.init();
-
     setTimeout(function() {
-
-        $('.giftem1, .giftem2').each(function() {
-            $(this).addClass('flip-this');
-            AOS.refreshHard
-        });
-
-
-    }, 500);
+        $('.giftem1').addClass('flip-this');
+        $('.giftem2').attr('data-aos', 'flip-right');
+        AOS.refreshHard
+    }, 300);
 
 $('#Subpage').on('scroll',AOS.refreshHard);
 
