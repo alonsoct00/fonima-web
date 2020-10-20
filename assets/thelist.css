@@ -131,8 +131,8 @@ h3 {
 
 .fonima-web-page .subtitle,
 .fonima-web-page h2 {
-    font-size: 42px;
-    font-size: 4.2rem;
+    font-size: 50px;
+    font-size: 5.0rem;
     font-family: 'Hanson', Helvetica, Arial, sans-serif;
     text-stroke: 0 transparent;
     -webkit-text-stroke: 0 transparent;
@@ -178,8 +178,8 @@ h4 {
 .outline-title {
     color: transparent;
     text-transform: uppercase;
-    text-stroke: .1vw #000;
-    -webkit-text-stroke: .1vw #000;
+    text-stroke: 1px #000;
+    -webkit-text-stroke: 1px #000;
     letter-spacing: 2px;
 }
 
@@ -419,7 +419,7 @@ a.btn.btn-ouline:focus {
     transition: .6s opacity ease;
     transform: translate3d(0, 0, 0);
     text-stroke: .2vw #fff;
-    opacity: 0.1;
+    opacity: 0;
     -webkit-text-stroke: .2vw #fff;
     top: 0;
     font-style: normal;
@@ -697,8 +697,8 @@ a.btn.btn-ouline:focus {
 }
 
 .Subpage__Content a {
-    text-decoration: none;
-    color: #888;
+    text-decoration: underline;
+    color: #000;
 }
 
 .Subpage__Content a:hover {
@@ -992,7 +992,7 @@ a.btn.btn-ouline:focus {
     white-space: nowrap;
     overflow: hidden;
     position: absolute;
-    width: 81%;
+    width: 83%;
 }
 
 .marquee span {
@@ -1051,14 +1051,14 @@ a.btn.btn-ouline:focus {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
     color: #000;
-    text-align: center;
+    text-align: left;
 }
 
 .footer-logo-img {
     width: 75%;
     clear: both;
     display: block;
-    margin: 0px auto;
+    margin: 0px 0px 0px auto;
 }
 
 
@@ -1115,6 +1115,9 @@ a.btn.btn-ouline:focus {
 .block-section .col-item .col-text h4 {
     text-transform: uppercase;
     margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 #Subpage .sub-page-content h2.title-icon {
@@ -1157,15 +1160,21 @@ a.btn.btn-ouline:focus {
     flex-shrink: 0;
 }
 
-#about-content .block-section#about-colaboradores .row {
+#about-content .block-section#about-colaboradores .colabs-imgs {
     align-items: normal;
-    justify-content: space-between;
+    justify-content: normal;
     width: 100%;
 }
 
-#about-content .block-section#about-colaboradores .col-item {
-    flex: 0 0 33.33%;
+#about-content .block-section#about-colaboradores .colabs {
+    flex: 0 0 auto;
+    display: inline-flex;
+    float: left;
     max-width: 30%;
+}
+
+#about-colaboradores .colabs img {
+    width: 70%;
 }
 
 #about-colaboradores>div>div:nth-child(3) {
@@ -1174,15 +1183,35 @@ a.btn.btn-ouline:focus {
 }
 
 
-#about-content .block-section#about-aliados .col-item {
+#about-content .block-section#about-aliados .aliadosimg {
     flex: 0 0 33.33%;
     max-width: 30%;
+}
+
+#about-aliados > div .aliado-1 img {
+    width: 40%;
 }
 
 #about-content .link-year {
     display: inline-block;
     margin-right: 48px;
 }
+
+#old-years{
+    margin-top: 40px
+}
+
+#about-content a.big-title-btn.outline-title {
+    text-decoration: none;
+    font-size: 70px;
+    font-family: 'Hanson', Helvetica, Arial, sans-serif;
+    color: transparent;
+}
+
+#about-content a.big-title-btn.outline-title:hover{
+    color: #000;
+}
+
 
 
 #programacion-content .block-section#prog-wrapper .row {
@@ -1247,7 +1276,6 @@ a.btn.btn-ouline:focus {
 .sub-programacion .main-content .content-info h4 {
     text-transform: uppercase;
 }
-
 
 
 #gifs-content .block-section#gifs-wrapper .row {
@@ -1317,7 +1345,6 @@ a.btn.btn-ouline:focus {
     position: relative;
     bottom: 40px;
 }
-
 
 
 #gifs-bases-2020 #bases2020-text {
@@ -1688,6 +1715,10 @@ a.btn.btn-ouline:focus {
         display: block;
         clear: both;
         margin: 0px 0px 24px 0px;
+    }
+
+    #about-intro > p {
+        width: 75%;
     }
 
 
