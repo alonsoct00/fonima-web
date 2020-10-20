@@ -85,7 +85,6 @@ jQuery(function($) {
 
         if (Href.substr(0, 2) == '#/') {
             if ($Subpage.hasClass('Loaded')) {
-                $(".footer-fonca").fadeOut();
                 $Subpage.animate({ opacity: 0 }, 500, function() {
                     $Subpage[0].scrollTop = 0;
                     $.get('subpages/' + Href.replace('#/', '') + '.html', function(Reply) {
@@ -97,6 +96,7 @@ jQuery(function($) {
                         });
                         var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
                         $Subpage.addClass($Subpageid);
+                        $(".footer-fonca").fadeOut();
                     });
                 });
             } else {
@@ -108,6 +108,7 @@ jQuery(function($) {
                     });
                     var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
                     $Subpage.addClass($Subpageid);
+                    $(".footer-fonca").fadeOut();
                 });
                 $Border.addClass('Faded');
                 $UI.addClass('Dark');
@@ -157,7 +158,6 @@ jQuery(function($) {
             if (Href.substr(0, 2) == '#/') {
                 window.location.hash = Href;
                 if ($Subpage.hasClass('Loaded')) {
-                    $(".footer-fonca").fadeOut();
                     $Subpage.animate({ opacity: 0 }, 500, function() {
                         $Subpage[0].scrollTop = 0;
                         $.get('subpages/' + Href.replace('#/', '') + '.html', function(Reply) {
@@ -172,6 +172,7 @@ jQuery(function($) {
                             var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
                             $Subpage.addClass($Subpageid);
                             _bgSubPage();
+                            $(".footer-fonca").fadeOut();
                         });
                     });
                 } else {
@@ -183,6 +184,7 @@ jQuery(function($) {
                         });
                         var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
                         $Subpage.addClass($Subpageid);
+                        $(".footer-fonca").fadeOut();
                     });
                     $Border.addClass('Faded');
                     $UI.addClass('Dark');
