@@ -1193,11 +1193,19 @@ a.btn.btn-ouline:focus {
     width: 30px;
     height: 30px;
     padding: 0px;
-    margin-right: 20px;
+    margin-right: 15px;
+}
+
+#about-content .team-item ul.team-social-list li:last-child {
+    margin-right: 0px;
 }
 
 #about-content .team-item ul.team-social-list li{
     font-style: normal;
+}
+
+#about-content .team-item ul.team-social-list li.weeeb{
+    width: auto !important; 
 }
 
 #about-content .team-item ul.team-social-list li a {
@@ -1274,6 +1282,11 @@ a.btn.btn-ouline:focus {
 
 #old-years {
     margin-top: 40px
+}
+
+.sub-page-content .content-img img {
+    width: 100%;
+    height: auto;
 }
 
 #about-content a.big-title-btn.outline-title {
@@ -1528,7 +1541,6 @@ a.btn.btn-ouline:focus {
     filter: opacity(0.5);
 }
 
-.team-social-list
 
 #conciertos-content .team-item ul.band-links-page li a img {
     width: 100%;
