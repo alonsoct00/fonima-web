@@ -68,7 +68,7 @@ jQuery(function($) {
         var Interval = setInterval(function() {
             $Subpage.find('h2 > div > span:not(.Active)').eq(Math.floor(Math.random() * $Subpage.find('h2 > div > span:not(.Active)').size())).addClass('Active');
             if (!$Subpage.find('h2 > div > span:not(.Active)').size()) { window.clearInterval(Interval); }
-        }, 200);
+        }, 300);
         $('h2 > span').each(function() {
             var $elem = $(this);
             $elem.html($elem.text().replace(/\s+/, ''));
@@ -78,8 +78,6 @@ jQuery(function($) {
     function _bgSubPage() {
         var $Subpageid = $Subpage.find('.sub-page-content').prop('id');
         $Subpage.addClass($Subpageid);
-
-        _HeaderAnim();
     }
 
     function _DeepLink() {
@@ -87,7 +85,6 @@ jQuery(function($) {
 
         if (Href.substr(0, 2) == '#/') {
             if ($Subpage.hasClass('Loaded')) {
-                $(".footer-fonca").fadeOut();
                 $Subpage.animate({ opacity: 0 }, 500, function() {
                     $Subpage[0].scrollTop = 0;
                     $.get('subpages/' + Href.replace('#/', '') + '.html', function(Reply) {
@@ -99,6 +96,7 @@ jQuery(function($) {
                         });
                         var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
                         $Subpage.addClass($Subpageid);
+                        $(".footer-fonca").fadeOut();
                     });
                 });
             } else {
@@ -110,6 +108,7 @@ jQuery(function($) {
                     });
                     var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
                     $Subpage.addClass($Subpageid);
+                    $(".footer-fonca").fadeOut();
                 });
                 $Border.addClass('Faded');
                 $UI.addClass('Dark');
@@ -159,7 +158,6 @@ jQuery(function($) {
             if (Href.substr(0, 2) == '#/') {
                 window.location.hash = Href;
                 if ($Subpage.hasClass('Loaded')) {
-                    $(".footer-fonca").fadeOut();
                     $Subpage.animate({ opacity: 0 }, 500, function() {
                         $Subpage[0].scrollTop = 0;
                         $.get('subpages/' + Href.replace('#/', '') + '.html', function(Reply) {
@@ -174,6 +172,7 @@ jQuery(function($) {
                             var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
                             $Subpage.addClass($Subpageid);
                             _bgSubPage();
+                            $(".footer-fonca").fadeOut();
                         });
                     });
                 } else {
@@ -185,6 +184,7 @@ jQuery(function($) {
                         });
                         var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
                         $Subpage.addClass($Subpageid);
+                        $(".footer-fonca").fadeOut();
                     });
                     $Border.addClass('Faded');
                     $UI.addClass('Dark');
