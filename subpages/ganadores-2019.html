@@ -61,8 +61,9 @@
     </div>
 </div>
 <div id="subpage-menu-content">
-    <p>Concurso de Gifs</p>
+    <p><a href="#/concurso-gifs">Concurso de Gifs</a></p>
     <ul class="HomeUi___Menu">
+        <li><a href="#/concurso-gifs"> <- Back</a></li>
         <li class="current"><a href="#">Ganadores 2019</a> <span>X</span></li>
         <li><a href="#/bases-2020">Bases 2020</a> <span>X</span></li>
         <!--<li><a href="#/ganadores-2020">Selección 2020</a> <span>X</span></li>-->
@@ -81,4 +82,13 @@ $('#Subpage').on('scroll', AOS.refreshHard);
 $('.gif-item').each(function() {
     $(this).on('scroll', AOS.refreshHard);
 });
+
+
+window.onhashchange = function() {
+    var whref = window.location.hash;
+
+    if (window.location.hash == whref) {
+        location.reload();
+    }
+}
 </script>

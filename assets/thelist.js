@@ -94,7 +94,7 @@ jQuery(function($) {
                             $(this).html('<span>' + Chars.join('</span><span>') + '</span>');
                             $Subpage.animate({ opacity: 1 }, 500);
                         });
-                        var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
+                        var $Subpageid = $Subpage.find('.sub-page-content').prop('id');
                         $Subpage.addClass($Subpageid);
                         $(".footer-fonca").fadeOut();
                     });
@@ -106,7 +106,7 @@ jQuery(function($) {
                         var Chars = $.trim($(this).html()).split("");
                         $(this).html('<span>' + Chars.join('</span><span>') + '</span>');
                     });
-                    var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
+                    var $Subpageid = $Subpage.find('.sub-page-content').prop('id');
                     $Subpage.addClass($Subpageid);
                     $(".footer-fonca").fadeOut();
                 });
@@ -169,7 +169,7 @@ jQuery(function($) {
                                     _HeaderAnim();
                                 });
                             });
-                            var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
+                            var $Subpageid = $Subpage.find('.sub-page-content').prop('id');
                             $Subpage.addClass($Subpageid);
                             _bgSubPage();
                             $(".footer-fonca").fadeOut();
@@ -182,7 +182,7 @@ jQuery(function($) {
                             var Chars = $.trim($(this).html()).split("");
                             $(this).html('<span>' + Chars.join('</span><span>') + '</span>');
                         });
-                        var $Subpageid = $Subpage.find('.sub-page-content').prop('id') || ('.sub-page-content').attr('id');
+                        var $Subpageid = $Subpage.find('.sub-page-content').prop('id');
                         $Subpage.addClass($Subpageid);
                         $(".footer-fonca").fadeOut();
                     });
@@ -275,6 +275,8 @@ jQuery(function($) {
 
         }, 200);
     }
+
+
 
     function _GetScrollerEndPoint() {
         var scrollHeight = $("#Subpage").prop('scrollHeight');
