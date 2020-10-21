@@ -102,18 +102,32 @@ $('.gif-item').each(function() {
 
 </script>
 
-
 <script>
-
 function goBack() {
     history.go(-1);
 }
 
-window.onhashchange = function() {
-    var whref = window.location.hash;
+$('.SubSubpage_Close').click(function(event) {
+        goBack();
+        event.preventDefault();
+});
 
-    if (window.location.hash == whref) {
-        location.reload();
+/*function Exit() {
+    return;
+}*/
+
+function Backbtn() {
+    window.onhashchange = function(e) {
+        var whref = window.location.hash;
+
+        if (window.location.hash == whref) {
+            location.reload();
+        }
+        else{
+            return false;
+        }
     }
 }
+
+Backbtn();
 </script>

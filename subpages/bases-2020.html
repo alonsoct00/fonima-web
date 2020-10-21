@@ -1,8 +1,8 @@
-
 <style>
-    body {
+body {
     background-color: #fff !important;
 }
+
 .TheList {
     display: none;
 }
@@ -11,7 +11,6 @@
     display: none;
 }
 </style>
-
 <div class="sub-page-content" id="gifs-bases-2020">
     <h2>
         <div>Bases 2020</div>
@@ -53,20 +52,33 @@
         <!--<li><a href="#/seleccion-2020">Ganadores 2020</a> <span>X</span></li>-->
     </ul>
 </div>
-
-<button class="SubSubpage_Close" onClick="history.go(-1);" id="SubSubpage_Close"><span>X</span> back</button>
-
+<button class="SubSubpage_Close" id="SubSubpage_Close"><span>X</span> back</button>
 <script>
-
 function goBack() {
     history.go(-1);
 }
 
-window.onhashchange = function() {
-    var whref = window.location.hash;
+$('.SubSubpage_Close').click(function(event) {
+        goBack();
+        event.preventDefault();
+});
 
-    if (window.location.hash == whref) {
-        location.reload();
+/*function Exit() {
+    return;
+}*/
+
+function Backbtn() {
+    window.onhashchange = function(e) {
+        var whref = window.location.hash;
+
+        if (window.location.hash == whref) {
+            location.reload();
+        }
+        else{
+            return false;
+        }
     }
 }
+
+Backbtn();
 </script>
