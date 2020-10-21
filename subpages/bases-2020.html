@@ -59,23 +59,26 @@ function goBack() {
 }
 
 $('.SubSubpage_Close').click(function(event) {
-        goBack();
-        event.preventDefault();
+    goBack();
+    event.preventDefault();
 });
 
-/*function Exit() {
-    return;
-}*/
 
 function Backbtn() {
+
+    $(window).on('pushstate', function(event) {
+        goBack();
+    });
+
     window.onhashchange = function(e) {
         var whref = window.location.hash;
 
         if (window.location.hash == whref) {
-            location.reload();
-        }
-        else{
+            history.go();
+            //location.reload();
+        } else {
             return false;
+            location.reload();
         }
     }
 }

@@ -131,30 +131,33 @@
     </ul>
 </div>
 
-<button class="SubSubpage_Close" onClick="history.go(-1);" id="SubSubpage_Close"><span>X</span> back</button>
+<button class="SubSubpage_Close" id="SubSubpage_Close"><span>X</span> back</button>
 <script>
 function goBack() {
     history.go(-1);
 }
 
 $('.SubSubpage_Close').click(function(event) {
-        goBack();
-        event.preventDefault();
+    goBack();
+    event.preventDefault();
 });
 
-/*function Exit() {
-    return;
-}*/
 
 function Backbtn() {
+
+    $(window).on('pushstate', function(event) {
+        goBack();
+    });
+
     window.onhashchange = function(e) {
         var whref = window.location.hash;
 
         if (window.location.hash == whref) {
-            location.reload();
-        }
-        else{
+            history.go();
+            //location.reload();
+        } else {
             return false;
+            location.reload();
         }
     }
 }
