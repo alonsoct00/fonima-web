@@ -1,3 +1,18 @@
+
+
+<style>
+    body {
+    background-color: #fff !important;
+}
+.TheList {
+    display: none;
+}
+
+#Subpage__Close {
+    display: none;
+}
+</style>
+
 <div class="sub-page-content" id="gifs-ganadores-2019">
     <h2>
         <div>Ganadores 2019</div>
@@ -63,12 +78,14 @@
 <div id="subpage-menu-content">
     <p><a href="#/concurso-gifs">Concurso de Gifs</a></p>
     <ul class="HomeUi___Menu">
-        <li><a href="#/concurso-gifs"><- Back</a> </li> 
         <li class="current"><a href="#">Ganadores 2019</a> <span>X</span></li>
         <li><a href="#/bases-2020">Bases 2020</a> <span>X</span></li>
         <!--<li><a href="#/ganadores-2020">Selección 2020</a> <span>X</span></li>-->
     </ul>
 </div>
+
+<button class="SubSubpage_Close" onClick="history.go(-1);" id="SubSubpage_Close"><span>X</span> back</button>
+
 <script type="text/javascript">
 AOS.init();
 setTimeout(function() {
@@ -83,6 +100,22 @@ $('.gif-item').each(function() {
     $(this).on('scroll', AOS.refreshHard);
 });
 
+
+window.onhashchange = function() {
+    var whref = window.location.hash;
+
+    if (window.location.hash == whref) {
+        location.reload();
+    }
+}
+</script>
+
+
+<script>
+
+function goBack() {
+    history.go(-1);
+}
 
 window.onhashchange = function() {
     var whref = window.location.hash;

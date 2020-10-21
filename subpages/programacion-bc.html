@@ -1,3 +1,15 @@
+<style>
+    body {
+    background-color: #fff !important;
+}
+.TheList {
+    display: none;
+}
+
+#Subpage__Close {
+    display: none;
+}
+</style>
 <div class="sub-page-content sub-programacion" id="programacion-content-bc">
     <h2 class="title-icon">
         <div class="w-icons">Baja California</div>
@@ -109,16 +121,23 @@
         </div>
     </div>
 </div>
+
 <div id="subpage-menu-content">
     <p><a href="#/programacion">Pogramación</a></p>
     <ul class="HomeUi___Menu">
-        <li><a href="#/programacion"> <- Back</a> </li> 
         <li class="current"><a href="#">BC</a> <span>X</span></li>
         <li><a href="#/programacion-cdmx">CDMX</a> <span>X</span></li>
         <li><a href="#/programacion-trc">TRC</a> <span>X</span></li>
     </ul>
 </div>
+
+<button class="SubSubpage_Close" onClick="history.go(-1);" id="SubSubpage_Close"><span>X</span> back</button>
 <script>
+
+function goBack() {
+    history.go(-1);
+}
+
 window.onhashchange = function() {
     var whref = window.location.hash;
 
