@@ -223,7 +223,6 @@ jQuery(function($) {
                 $(".footer-fonca").fadeIn();
             });
             return false;
-
         });
 
         $('.HomeUi___Menu li a').on('click', function() {

@@ -670,7 +670,7 @@ a.btn.btn-ouline:focus {
     margin: 3em 0;
 }
 
-.Subpage__Close {
+.Subpage__Close, .SubSubpage_Close {
     color: #000;
     position: fixed;
     top: 50%;
@@ -680,18 +680,20 @@ a.btn.btn-ouline:focus {
     transform: translateX(-10vw);
     display: inline-block;
     text-transform: uppercase;
+    background: transparent;
+    border: 0px;
 }
 
-.Subpage__Close span {
+.Subpage__Close span, .SubSubpage_Close span {
     opacity: .5;
     font-weight: 400;
 }
 
-.Subpage__Close:hover {
+.Subpage__Close:hover, .SubSubpage_Close:hover {
     font-weight: 700;
 }
 
-.Subpage.Loaded .Subpage__Close {
+.Subpage.Loaded .Subpage__Close, .Subpage.Loaded .SubSubpage_Close {
     transform: translateX(0);
 }
 
@@ -704,7 +706,7 @@ a.btn.btn-ouline:focus {
     text-decoration: underline;
 }
 
-.Subpage__Close {
+.Subpage__Close, .SubSubpage_Close {
     font-family: 'FK-roaster', Monaco, Arial, sans-serif !important;
     font-size: 27px;
     font-size: 2.7rem;

@@ -1,3 +1,17 @@
+
+<style>
+    body {
+    background-color: #fff !important;
+}
+.TheList {
+    display: none;
+}
+
+#Subpage__Close {
+    display: none;
+}
+</style>
+
 <div class="sub-page-content" id="gifs-bases-2020">
     <h2>
         <div>Bases 2020</div>
@@ -34,13 +48,20 @@
 <div id="subpage-menu-content">
     <p><a href="#/concurso-gifs">Concurso de Gifs</a></p>
     <ul class="HomeUi___Menu">
-        <li><a href="#/concurso-gifs"><- Back</a> </li> 
         <li><a href="#/ganadores-2019">Ganadores 2019</a> <span>X</span></li>
         <li class="current"><a href="#">Bases 2020</a> <span>X</span></li>
         <!--<li><a href="#/seleccion-2020">Ganadores 2020</a> <span>X</span></li>-->
     </ul>
 </div>
+
+<button class="SubSubpage_Close" onClick="history.go(-1);" id="SubSubpage_Close"><span>X</span> back</button>
+
 <script>
+
+function goBack() {
+    history.go(-1);
+}
+
 window.onhashchange = function() {
     var whref = window.location.hash;
 
