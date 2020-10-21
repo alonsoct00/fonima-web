@@ -101,16 +101,31 @@
 
 <button class="SubSubpage_Close" onClick="history.go(-1);" id="SubSubpage_Close"><span>X</span> back</button>
 <script>
-
 function goBack() {
     history.go(-1);
 }
 
-window.onhashchange = function() {
-    var whref = window.location.hash;
+$('.SubSubpage_Close').click(function(event) {
+        goBack();
+        event.preventDefault();
+});
 
-    if (window.location.hash == whref) {
-        location.reload();
+/*function Exit() {
+    return;
+}*/
+
+function Backbtn() {
+    window.onhashchange = function(e) {
+        var whref = window.location.hash;
+
+        if (window.location.hash == whref) {
+            location.reload();
+        }
+        else{
+            return false;
+        }
     }
 }
+
+Backbtn();
 </script>
