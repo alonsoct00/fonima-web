@@ -75,10 +75,20 @@
     </div>
 </div>
 <div id="subpage-menu-content">
-    <p>Programación</p>
+    <p><a href="#/programacion">Pogramación</a></p>
     <ul class="HomeUi___Menu">
+        <li><a href="#/programacion"> <- Back</a></li>
         <li><a href="#/programacion-bc">BC</a> <span>X</span></li>
         <li><a href="#/prograacion-cdmx">CDMX</a> <span>X</span></li>
         <li class="current"><a href="#">TRC</a> <span>X</span></li>
     </ul>
 </div>
+<script>
+    window.onhashchange = function() {
+    var whref = window.location.hash;
+
+    if (window.location.hash == whref) {
+        location.reload();
+    }
+}
+</script>

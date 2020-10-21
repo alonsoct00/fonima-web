@@ -32,10 +32,21 @@
     </div>
 </div>
 <div id="subpage-menu-content">
-    <p>Concurso de Gifs</p>
+    <p><a href="#/concurso-gifs">Concurso de Gifs</a></p>
     <ul class="HomeUi___Menu">
+        <li><a href="#/concurso-gifs"> <- Back</a></li>
         <li><a href="#/ganadores-2019">Ganadores 2019</a> <span>X</span></li>
         <li class="current"><a href="#">Bases 2020</a> <span>X</span></li>
         <!--<li><a href="#/seleccion-2020">Ganadores 2020</a> <span>X</span></li>-->
     </ul>
 </div>
+
+<script>
+    window.onhashchange = function() {
+    var whref = window.location.hash;
+
+    if (window.location.hash == whref) {
+        location.reload();
+    }
+}
+</script>
