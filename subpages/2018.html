@@ -1,3 +1,17 @@
+
+<style>
+    body {
+    background-color: #fff !important;
+}
+.TheList {
+    display: none;
+}
+
+#Subpage__Close {
+    display: none;
+}
+</style>
+
 <div class="sub-page-content" id="2018-content">
     <div class="block-section">
         <h2>
@@ -5,9 +19,6 @@
         </h2>
         <div class="row">
             <div class="main-content">
-                <div class="content-img">
-                    <img src="assets/images/fotos/2018.jpg" alt="">
-                </div>
                 <div class="content-info">
                     <p>La primera edición de FONIMA, se llevó a cabo el 29 de noviembre en LOOT GALLERY
                         dentro del marco del festival ANIMASIVO en la ciudad de México. Reunimos a 43 animadores, 13 músicos y 3 Vj, repartidos en sesiones con base a la improvisación sonora y visual. Logramos una audiencia de 150 asistentes en un evento que duró 3 hrs.
@@ -16,7 +27,45 @@
                 <div class="ct-btn">
                     <a href="https://www.dessignare.com/2019/01/especial-animasivo-y-casiopeamx.html" class="btn btn-ouline" target="_blank">+ info</a>
                 </div>
+                <div class="content-img" style="margin-top: 40px;">
+                    <img src="assets/images/fotos/2018.jpg" alt="">
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<button class="SubSubpage_Close" id="SubSubpage_Close"><span>X</span> back</button>
+
+<script>
+function goBack() {
+    history.go(-1);
+}
+
+$('.SubSubpage_Close').click(function(event) {
+    goBack();
+    event.preventDefault();
+});
+
+
+function Backbtn() {
+
+    $(window).on('pushstate', function(event) {
+        goBack();
+    });
+
+    window.onhashchange = function(e) {
+        var whref = window.location.hash;
+
+        if (window.location.hash == whref) {
+            history.go();
+            //location.reload();
+        } else {
+            return false;
+            location.reload();
+        }
+    }
+}
+
+Backbtn();
+</script>
