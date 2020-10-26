@@ -1,5 +1,3 @@
-
-
 <style>
     body {
     background-color: #fff !important;
@@ -12,7 +10,6 @@
     display: none;
 }
 </style>
-
 <div class="sub-page-content" id="gifs-ganadores-2019">
     <h2>
         <div>Ganadores 2019</div>
@@ -73,7 +70,6 @@
                 </p>
             </div>
         </div>
-
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
                 <video class="video" poster="https://dummyimage.com/600x320/d4d4d4/000000.gif&text=video-poster 600x300" playsinline muted autobuffer loop controls>
@@ -98,9 +94,7 @@
         <!--<li><a href="#/ganadores-2020">Selección 2020</a> <span>X</span></li>-->
     </ul>
 </div>
-
 <button class="SubSubpage_Close" id="SubSubpage_Close"><span>X</span> back</button>
-
 <script type="text/javascript">
 AOS.init();
 setTimeout(function() {
@@ -115,7 +109,6 @@ $('.gif-item').each(function() {
     $(this).on('scroll', AOS.refreshHard);
 });
 
-
 $('#Subpage').scroll(function() {
     $('video').each(function() {
         if ($(this).visible(true)) {
@@ -125,26 +118,19 @@ $('#Subpage').scroll(function() {
         }
     })
 });
-
 </script>
-
 <script>
 function goBack() {
     history.go(-1);
 }
-
 $('.SubSubpage_Close').click(function(event) {
     goBack();
     event.preventDefault();
 });
-
-
 function Backbtn() {
-
     $(window).on('pushstate', function(event) {
         goBack();
     });
-
     window.onhashchange = function(e) {
         var whref = window.location.hash;
 
@@ -157,6 +143,5 @@ function Backbtn() {
         }
     }
 }
-
 Backbtn();
 </script>
