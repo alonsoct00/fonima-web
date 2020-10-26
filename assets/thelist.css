@@ -1404,6 +1404,8 @@ ul.team-social-list li a:focus {
 }
 
 
+
+
 #gifs-content .block-section#gifs-wrapper .row {
     align-items: normal;
     justify-content: space-between;
@@ -1424,6 +1426,14 @@ ul.team-social-list li a:focus {
     opacity: .9;
     -webkit-transform: scale(1.045);
     transform: scale(1.045);
+}
+
+
+#gifs-content .block-section#gifs-wrapper .col-item.desactived-item{
+    opacity: 0.2;
+    cursor: not-allowed !important;
+    z-index: -1;
+    filter: contrast(0.5) blur(1px);
 }
 
 #gifs-content .block-section#gifs-wrapper .col-item .img-item {
@@ -1598,6 +1608,7 @@ ul.band-links-page li a:focus {
     html {
         font-size: 100%
     }
+    
 
 }
 
