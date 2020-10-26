@@ -50,7 +50,7 @@
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
                 <video class="video" poster="https://dummyimage.com/600x320/d4d4d4/000000.gif&text=video-poster 600x300" playsinline muted autobuffer loop controls>
-                    <source src="assets/videos/3-THSBR-x-romtrademark-.mp4">
+                    <source src="assets/videos/3-THSBR-x-romtrademark.mp4">
                     <object type="video/ogg" data="assets/videos/3-THSBR-x-romtrademark.ogg" style="width: 100%; height: 100%">
                         <p><a href="assets/videos/3-THSBR-x-romtrademark.mp4" target="_blank">Ver video.</a></p>
                     </object>
@@ -113,6 +113,17 @@ $('#Subpage').on('scroll', AOS.refreshHard);
 
 $('.gif-item').each(function() {
     $(this).on('scroll', AOS.refreshHard);
+});
+
+
+$('#Subpage').scroll(function() {
+    $('video').each(function() {
+        if ($(this).visible(true)) {
+            $(this)[0].play();
+        } else {
+            $(this)[0].pause();
+        }
+    })
 });
 
 </script>
