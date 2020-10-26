@@ -984,7 +984,6 @@ a.btn.btn-ouline:focus {
 }
 
 
-
 /*-------------------------Custom Styles--------------*/
 
 .marquee-container {
@@ -1006,8 +1005,8 @@ a.btn.btn-ouline:focus {
     padding-left: 100%;
     animation: marquee 90s linear infinite;
     font-family: 'FK-roaster', Monaco, Arial, sans-serif;
-    font-size: 27px;
-    font-size: 2.7rem;
+    font-size: 24px;
+    font-size: 2.4rem;
     color: #000;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -1114,7 +1113,7 @@ a.btn.btn-ouline:focus {
     margin-bottom: 0px;
 }
 
-.content-info.mb-4{
+.content-info.mb-4 {
     margin-bottom: 40px;
 }
 
@@ -1262,7 +1261,7 @@ ul.team-social-list li a:focus {
     margin-bottom: 40px;
 }
 
-#about-content .block-section#about-colaboradores .colabs-imgs.nosnos{
+#about-content .block-section#about-colaboradores .colabs-imgs.nosnos {
     margin-bottom: 0px;
 }
 
@@ -1429,7 +1428,7 @@ ul.team-social-list li a:focus {
 }
 
 
-#gifs-content .block-section#gifs-wrapper .col-item.desactived-item{
+#gifs-content .block-section#gifs-wrapper .col-item.desactived-item {
     opacity: 0.2;
     cursor: not-allowed !important;
     z-index: -1;
@@ -1608,7 +1607,7 @@ ul.band-links-page li a:focus {
     html {
         font-size: 100%
     }
-    
+
 
 }
 
