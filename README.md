@@ -42,7 +42,7 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 
 ## Licencia 📄
 Este proyecto está bajo la Licencia (Regular License) - (https://themeforest.net/licenses/terms/regular)
-
+Todos los contenidos, textos, imágenes, videos, archivos multimedias son propiedad de FONIMA
 
 
 
