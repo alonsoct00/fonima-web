@@ -732,7 +732,8 @@ a.btn.btn-ouline:focus {
         top: 2em;
     }
 
-    .Subpage__Close {
+    .Subpage__Close,
+    .SubSubpage_Close {
         left: 3.2vw;
     }
 }
@@ -810,14 +811,16 @@ a.btn.btn-ouline:focus {
         margin: 2em 0;
     }
 
-    .Subpage__Close {
+    .Subpage__Close, 
+    .SubSubpage_Close {
         transform: translateX(-20vw) rotate(-90deg);
         transform-origin: 50% 50%;
         left: 5.2vw;
     }
 
-    .Subpage.Loaded .Subpage__Close {
-        transform: translateX(-8vw) rotate(-90deg);
+    .Subpage.Loaded .Subpage__Close,
+    .Subpage.Loaded .SubSubpage_Close {
+        transform: translateX(-10vw) rotate(-90deg);
     }
 
     .Subpage__Content h2 {
@@ -1774,11 +1777,6 @@ ul.band-links-page li a:focus {
         flex: 0 0 100%;
     }
 
-    .Subpage.Loaded .Subpage__Close,
-    .Subpage.Loaded .SubSubpage_Close {
-        transform: translateX(-8vw) rotate(-90deg);
-    }
-
 }
 
 
@@ -1789,7 +1787,13 @@ ul.band-links-page li a:focus {
 
     .Subpage.Loaded .Subpage__Close,
     .Subpage.Loaded .SubSubpage_Close {
-        transform: translateX(-8vw) rotate(-90deg);
+        transform: translateX(0vw) rotate(-90deg);
+        left: 0px;
+    }
+
+    .fonima-web-page .subtitle, .fonima-web-page h2{
+        font-size: 48px;
+        font-size: 4.8rem;
     }
 
 }
@@ -1923,11 +1927,6 @@ ul.band-links-page li a:focus {
         max-width: 100%;
     }
 
-    .fonima-web-page .Subpage__Close {
-        left: 10px;
-        font-size: 20px;
-        font-size: 2rem;
-    }
 
     .fonima-web-page .sub-page-content .block-section .main-content {
         width: 100%;
@@ -2149,7 +2148,9 @@ ul.band-links-page li a:focus {
     }
 
     .Subpage.Loaded .SubSubpage_Close {
-        transform: translateX(-8vw) rotate(-90deg) !important;
+        transform: translateX(-10vw) rotate(-90deg) !important;
+        left:  0vw !important;
+        padding-top: 4%;
     }
 }
 
@@ -2159,18 +2160,24 @@ ul.band-links-page li a:focus {
         font-size: 50%
     }
 
+    #programacion-content>h2 {
+        font-size: 30px;
+        font-size: 3rem;
+    }
+
     #programacion-content-bc>h2>div>span:nth-child(5) {
 
         width: 52%;
     }
+
 
     .fonima-web-page .TheList .TheList__Title {
         width: 100%;
     }
 
     .fonima-web-page .fonima-ui-custom .TheList .TheList__Title {
-        font-size: 30px;
-        font-size: 3rem;
+        font-size: 32px;
+        font-size: 3.2rem;
     }
 
     #programacion-content-bc>div>div:nth-child(3)>div.main-content>div:nth-child(1)>h3 {
