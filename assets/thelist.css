@@ -2179,7 +2179,7 @@ ul.band-links-page li a:focus {
     }
 
     .Subpage.Loaded .SubSubpage_Close {
-        left: 5px;
+        left: 0px;
     }
 
     .sub-subtitle, h3, h4 {
