@@ -1800,7 +1800,7 @@ ul.band-links-page li a:focus {
 
 
 
-@media (max-width:767px) {
+@media only screen and (max-width:767px) {
     .fonima-web-page .fonima-ui-custom .TheList__Wrapper {
         padding-bottom: 2vw;
         padding-right: 0px;
@@ -2064,7 +2064,7 @@ ul.band-links-page li a:focus {
     }
 
     #conciertos-content>h2>div>span:nth-child(10) {
-        width: 24%;
+        width: 23%;
     }
 
     #conciertos-content .team-item {
@@ -2096,6 +2096,9 @@ ul.band-links-page li a:focus {
     #gifs-ganadores-2019 > h2 {
         max-width: 340px;
         text-align: left;
+    }
+    #gifs-content > h2 > div > span:nth-child(12){
+        padding: 0px 8px;
     }
 
     #gifs-content .block-section#gifs-wrapper .row {
@@ -2142,6 +2145,10 @@ ul.band-links-page li a:focus {
         padding-left: 0px;
     }
 
+    #gifs-bases-2020 > h2 > div > span:nth-child(6){
+        padding: 0px 8px;
+    }
+
     .bg-12,
     .contact-content {
         background: var(--bg-gray) url(images/backgrounds/BG-12.png) no-repeat 0px 0px / cover;
@@ -2157,7 +2164,7 @@ ul.band-links-page li a:focus {
 
 }
 
-@media only screen and (max-device-width : 370px) {
+@media only screen and (max-device-width : 370px), only screen and (max-width: 370px) {
 
     html {
         font-size: 50%
@@ -2171,6 +2178,11 @@ ul.band-links-page li a:focus {
     #programacion-content>h2 {
         font-size: 30px;
         font-size: 3rem;
+    }
+
+    #conciertos-content>h2{
+        font-size: 33px;
+        font-size: 3.3rem;
     }
 
     #programacion-content-bc>h2>div>span:nth-child(5) {
@@ -2212,7 +2224,7 @@ ul.band-links-page li a:focus {
     }
 
     #conciertos-content>h2>div>span:nth-child(10) {
-        width: 23%;
+        width: 22%;
     }
 
     .sub-subtitle,
