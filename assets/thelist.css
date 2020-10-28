@@ -683,6 +683,7 @@ a.btn.btn-ouline:focus {
     text-transform: uppercase;
     background: transparent;
     border: 0px;
+    z-index: 2
 }
 
 .Subpage__Close span,
@@ -1786,14 +1787,11 @@ ul.band-links-page li a:focus {
         display: none;
     }
 
-    .Subpage.Loaded .Subpage__Close {
-        transform: translateX(-8vw) rotate(-90deg);
-    }
-
     .Subpage.Loaded .Subpage__Close,
     .Subpage.Loaded .SubSubpage_Close {
         transform: translateX(-8vw) rotate(-90deg);
     }
+
 }
 
 
@@ -2151,8 +2149,7 @@ ul.band-links-page li a:focus {
     }
 
     .Subpage.Loaded .SubSubpage_Close {
-        transform: translateX(-8vw) rotate(-90deg);
-        left: 0px;
+        transform: translateX(-8vw) rotate(-90deg) !important;
     }
 }
 
@@ -2184,10 +2181,6 @@ ul.band-links-page li a:focus {
 
     #conciertos-content>h2>div>span:nth-child(10) {
         width: 23%;
-    }
-
-    .Subpage.Loaded .SubSubpage_Close {
-        left: 0px;
     }
 
     .sub-subtitle,
