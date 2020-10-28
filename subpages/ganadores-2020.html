@@ -80,16 +80,21 @@
 <script type="text/javascript">
 AOS.init();
 setTimeout(function() {
-    $('.giftem1').addClass('flip-this');
-    //$('.giftem2').attr('data-aos', 'flip-right');
-    AOS.refreshHard
-}, 300);
+    $('.giftem1, .gifitem2').addClass('flip-this');
+}, 1000);
 
 $('#Subpage').on('scroll', AOS.refreshHard);
 
-$('.gif-item').each(function() {
-    $(this).on('scroll', AOS.refreshHard);
+$('#Subpage').scroll(function() {
+    $('.gif-item video.video').each(function() {
+        if ($(this).visible(true)) {
+            $(this)[0].play();
+        } else {
+            $(this)[0].pause();
+        }
+    });
 });
+
 </script>
 <script>
 function goBack() {
