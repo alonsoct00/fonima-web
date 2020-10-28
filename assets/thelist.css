@@ -1823,7 +1823,7 @@ ul.band-links-page li a:focus {
 
     .fonima-web-page .TheList__List {
         width: 100%;
-        max-width: 95% !important;
+        max-width: 390px !important;
         overflow-x: hidden;
     }
 
@@ -2084,10 +2084,9 @@ ul.band-links-page li a:focus {
         border-radius: 100%;
     }
 
-    #gifs-content>h2 {
-        font-size: 40px;
-        font-size: 4rem;
-        text-align: center;
+    #gifs-ganadores-2019 > h2 {
+        max-width: 340px;
+        text-align: left;
     }
 
     #gifs-content .block-section#gifs-wrapper .row {
@@ -2160,6 +2159,11 @@ ul.band-links-page li a:focus {
         font-size: 50%
     }
 
+
+    .fonima-web-page .TheList__List{
+        max-width: 100%;
+    }
+
     #programacion-content>h2 {
         font-size: 30px;
         font-size: 3rem;
@@ -2178,6 +2182,23 @@ ul.band-links-page li a:focus {
     .fonima-web-page .fonima-ui-custom .TheList .TheList__Title {
         font-size: 32px;
         font-size: 3.2rem;
+    }
+
+    #gifs-content > h2 {
+        max-width: 240px;
+    }
+
+    #gifs-ganadores-2019 > h2,
+    #gifs-ganadores-2020 > h2 {
+        max-width: 280px;
+        text-align: left;
+    }
+
+    #gifs-ganadores-2019 > div > div:nth-child(1) > h3,
+    #gifs-ganadores-2020 > div > div:nth-child(1) > h3
+     {
+        max-width: 290px;
+        text-align: left;
     }
 
     #programacion-content-bc>div>div:nth-child(3)>div.main-content>div:nth-child(1)>h3 {

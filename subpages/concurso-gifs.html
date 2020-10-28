@@ -35,3 +35,9 @@
         </div>
     </div>
 </div>
+<script>
+        $(window).on('popstate', function(event) {
+        history.go();
+        location.reload();
+    });
+</script>
