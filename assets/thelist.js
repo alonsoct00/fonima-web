@@ -68,7 +68,7 @@ jQuery(function($) {
         var Interval = setInterval(function() {
             $Subpage.find('h2 > div > span:not(.Active)').eq(Math.floor(Math.random() * $Subpage.find('h2 > div > span:not(.Active)').size())).addClass('Active');
             if (!$Subpage.find('h2 > div > span:not(.Active)').size()) { window.clearInterval(Interval); }
-        }, 300);
+        }, 100);
         $('h2 > span').each(function() {
             var $elem = $(this);
             $elem.html($elem.text().replace(/\s+/, ''));

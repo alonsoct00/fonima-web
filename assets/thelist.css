@@ -1005,8 +1005,8 @@ a.btn.btn-ouline:focus {
     padding-left: 100%;
     animation: marquee 90s linear infinite;
     font-family: 'FK-roaster', Monaco, Arial, sans-serif;
-    font-size: 24px;
-    font-size: 2.4rem;
+    font-size: 22px;
+    font-size: 2.2rem;
     color: #000;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -1740,12 +1740,9 @@ ul.band-links-page li a:focus {
         flex: 0 0 100%;
     }
 
-    .Subpage.Loaded .Subpage__Close {
+    .Subpage.Loaded .Subpage__Close,
+    .Subpage.Loaded .SubSubpage_Close {
         transform: translateX(-8vw) rotate(-90deg);
-    }
-
-    .Subpage__Close {
-        left: 5.2vw;
     }
 
 }
@@ -1759,7 +1756,19 @@ ul.band-links-page li a:focus {
     .Subpage.Loaded .Subpage__Close {
         transform: translateX(-8vw) rotate(-90deg);
     }
+
+    .Subpage.Loaded .Subpage__Close,
+    .Subpage.Loaded .SubSubpage_Close {
+        transform: translateX(-8vw) rotate(-90deg);
+    }
+
+    .Subpage__Close,
+    .Subpage.Loaded .SubSubpage_Close {
+        left: 5.2vw;
+    }
 }
+
+
 
 @media (max-width:767px) {
     .fonima-web-page .fonima-ui-custom .TheList__Wrapper {
@@ -1778,7 +1787,7 @@ ul.band-links-page li a:focus {
         margin-left: 0;
         padding-left: 0;
         overflow-wrap: break-word;
-        width: 100%;
+        width: 90%;
         word-break: break-all;
     }
 
@@ -1788,6 +1797,13 @@ ul.band-links-page li a:focus {
         overflow-x: hidden;
     }
 
+    .sub-page-content {
+        padding-bottom: 60px;
+    }
+
+    .sub-page-content .main-content {
+        margin-top: 16px;
+    }
 
     .sub-page-content .block-section {
         display: block;
@@ -1868,7 +1884,6 @@ ul.band-links-page li a:focus {
         text-align: right;
         opacity: 1;
         color: #000;
-        background: #ffffff9c;
         padding: 10px 10px;
         display: none;
     }
@@ -1894,8 +1909,18 @@ ul.band-links-page li a:focus {
         overflow-x: hidden;
     }
 
+    .fonima-web-page .sub-page-content .block-section .ct-btn {
+        flex-wrap: wrap;
+        margin-top: 24px;
+    }
+
     .fonima-web-page .sub-page-content .block-section .ct-btn .btn-ouline {
         margin-bottom: 20px;
+        width: 90%;
+        display: block;
+        clear: both;
+        float: left;
+        margin: 0px auto 24px auto;
     }
 
     .fonima-web-page .sub-page-content .block-section .main-content .content-info h3,
@@ -1933,12 +1958,39 @@ ul.band-links-page li a:focus {
         max-width: 80%;
         display: block;
         margin: 0px 0px 20px 0px;
+        clear: both;
+        width: 100%;
     }
 
     #about-content .block-section#about-aliados .col-item {
-        flex: 0 0 auto;
+        flex: 0 0 auto !important;
         max-width: 80%;
         display: block;
+    }
+
+    #about-content .block-section .col-item.colabs.colab-3 {
+        position: static !important;
+    }
+
+    #about-content .block-section .col-item.colabs.colab-4,
+    #about-content .block-section .col-item.colabs.colab-5 {
+        width: auto !important;
+        max-width: 50% !important;
+    }
+
+    #about-content .block-section .col-item.colabs.colab-4 img {
+        width: 40% !important;
+    }
+
+    #about-content .block-section .col-item.colabs.colab-5 img {
+        width: 40% !important;
+    }
+
+    #about-content .block-section#about-colaboradores .colabs-imgs.nosnos {
+        margin-bottom: 0px;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: normal;
     }
 
     #about-content .link-year {
@@ -1948,7 +2000,7 @@ ul.band-links-page li a:focus {
     }
 
     #about-intro>p {
-        width: 75%;
+        width: 90%;
     }
 
 
@@ -1960,13 +2012,21 @@ ul.band-links-page li a:focus {
 
     }
 
+    .sub-page-content.sub-programacion {
+        padding-bottom: 90px !important;
+    }
+
+    #programacion-content.sub-page-content h2 div {
+        width: 280px;
+    }
+
     #programacion-content-bc>h2 {
         font-size: 35px;
         font-size: 3.5rem;
     }
 
     #programacion-content-bc>h2>div>span:nth-child(5) {
-        width: 150px;
+        width: 50%;
     }
 
     #conciertos-content .team-item {
@@ -1979,7 +2039,7 @@ ul.band-links-page li a:focus {
 
     #conciertos-content .team-item .img-bio {
         background: #fff;
-        width: 100%;
+        width: 70%;
         height: auto;
         border-radius: 100%;
         display: block;
@@ -2041,6 +2101,10 @@ ul.band-links-page li a:focus {
         flex: 0 0 100%;
     }
 
+    #gifs-bases-2020 #bases2020-text {
+        padding-left: 0px;
+    }
+
     .bg-12,
     .contact-content {
         background: var(--bg-gray) url(images/backgrounds/BG-12.png) no-repeat 0px 0px / cover;
@@ -2054,4 +2118,19 @@ ul.band-links-page li a:focus {
         background-position: center top !important;
     }
 
+    .Subpage.Loaded .SubSubpage_Close {
+        transform: translateX(-8vw) rotate(-90deg);
+    }
+}
+
+@media only screen and (max-device-width : 320px) {
+
+    html {
+        font-size: 50%
+    }
+
+    #programacion-content-bc>h2>div>span:nth-child(5) {
+
+        width: 100%;
+    }
 }
