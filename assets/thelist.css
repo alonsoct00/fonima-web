@@ -2146,11 +2146,6 @@ ul.band-links-page li a:focus {
         background-position: center top !important;
     }
 
-    .Subpage.Loaded .SubSubpage_Close {
-        transform: translateX(-10vw) rotate(-90deg) !important;
-        left:  0vw !important;
-        padding-top: 4%;
-    }
 }
 
 @media only screen and (max-device-width : 370px) {
