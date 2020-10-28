@@ -22,7 +22,7 @@ jQuery(function($) {
     $Window.on('load', function() {
         setTimeout(function() { $Border.removeClass('Faded'); }, 900);
         setTimeout(function() { $Logo.removeClass('Dark'); }, 1000);
-        setTimeout(_DeepLink, 1000);
+        setTimeout(_DeepLink, 1500);
 
     });
 
@@ -86,14 +86,14 @@ jQuery(function($) {
 
         if (Href.substr(0, 2) == '#/') {
             if ($Subpage.hasClass('Loaded')) {
-                $Subpage.animate({ opacity: 0 }, 300, function() {
+                $Subpage.animate({ opacity: 0 }, 500, function() {
                     $Subpage[0].scrollTop = 0;
                     $.get('subpages/' + Href.replace('#/', '') + '.html', function(Reply) {
                         $SubpageContent.html(Reply);
                         $SubpageContent.find('h2 > div').each(function() {
                             var Chars = $.trim($(this).html()).split("");
                             $(this).html('<span>' + Chars.join('</span><span>') + '</span>');
-                            $Subpage.animate({ opacity: 1 }, 300);
+                            $Subpage.animate({ opacity: 1 }, 500);
                         });
                         var $Subpageid = $Subpage.find('.sub-page-content').prop('id');
                         $Subpage.addClass($Subpageid);
@@ -119,12 +119,12 @@ jQuery(function($) {
                 $Subpage[0].scrollTop = 0;
                 setTimeout(function() {
                     $Body.css('overflow', 'hidden');
-                    $Subpage.animate({ opacity: 1 }, 300, function() {
+                    $Subpage.animate({ opacity: 1 }, 500, function() {
                         $Subpage.addClass('Loaded');
                     });
                     _HeaderAnim();
                     _bgSubPage();
-                }, 500);
+                }, 700);
             }
             return false;
         }
@@ -164,14 +164,14 @@ jQuery(function($) {
             if (Href.substr(0, 2) == '#/') {
                 window.location.hash = Href;
                 if ($Subpage.hasClass('Loaded')) {
-                    $Subpage.animate({ opacity: 0 }, 300, function() {
+                    $Subpage.animate({ opacity: 0 }, 500, function() {
                         $Subpage[0].scrollTop = 0;
                         $.get('subpages/' + Href.replace('#/', '') + '.html', function(Reply) {
                             $SubpageContent.html(Reply);
                             $SubpageContent.find('h2 > div').each(function() {
                                 var Chars = $.trim($(this).html()).split("");
                                 $(this).html('<span>' + Chars.join('</span><span>') + '</span>');
-                                $Subpage.animate({ opacity: 1 }, 300, function() {
+                                $Subpage.animate({ opacity: 1 }, 500, function() {
                                     _HeaderAnim();
                                 });
                             });
@@ -201,12 +201,12 @@ jQuery(function($) {
                     $Subpage[0].scrollTop = 0;
                     setTimeout(function() {
                         $Body.css('overflow', 'hidden');
-                        $Subpage.animate({ opacity: 1 }, 300, function() {
+                        $Subpage.animate({ opacity: 1 }, 500, function() {
                             $Subpage.addClass('Loaded');
                         });
                         _HeaderAnim();
                         _bgSubPage();
-                    }, 500);
+                    }, 700);
                 }
                 return false;
             }
@@ -217,7 +217,7 @@ jQuery(function($) {
             $Subpage.removeClass('Loaded');
             var $Subpageid = $('.sub-page-content').prop('id');
             $Subpage.removeClass($Subpageid);
-            $Subpage.animate({ opacity: 0 }, 300, function() {
+            $Subpage.animate({ opacity: 0 }, 500, function() {
                 $Subpage[0].scrollTop = 0;
                 $SubpageContent.html('');
                 $Border.removeClass('Faded');
@@ -236,7 +236,7 @@ jQuery(function($) {
             $Subpage.removeClass('Loaded');
             var $Subpageid = $('.sub-page-content').prop('id');
             $Subpage.removeClass($Subpageid);
-            $Subpage.animate({ opacity: 0 }, 300, function() {
+            $Subpage.animate({ opacity: 0 }, 500, function() {
                 $Subpage[0].scrollTop = 0;
                 $SubpageContent.html('');
                 $Border.removeClass('Faded');

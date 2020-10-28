@@ -9,6 +9,9 @@
 #Subpage__Close {
     display: none;
 }
+#SubSubpage_Close {
+    display: block !important;
+}
 </style>
 <div class="sub-page-content sub-programacion" id="programacion-content-bc">
     <h2 class="title-icon">
@@ -132,36 +135,34 @@
         <li><a href="#/programacion-trc">TRC</a> <span>X</span></li>
     </ul>
 </div>
-<button class="SubSubpage_Close" id="SubSubpage_Close"><span>X</span> back</button>
 <script>
-function goBack() {
-    history.go(-1);
-}
 
 $('.SubSubpage_Close').click(function(event) {
-    goBack();
+    history.go(-1);
+    location.reload();
     event.preventDefault();
 });
 
-
-function Backbtn() {
-
+function Browsebtn() {
     $(window).on('pushstate', function(event) {
-        goBack();
+        history.go();
+        location.reload();
     });
-
-    window.onhashchange = function(e) {
+    $(window).on('popstate', function(event) {
+        history.go();
+        location.reload();
+    });
+    /*window.onhashchange = function(e) {
         var whref = window.location.hash;
 
         if (window.location.hash == whref) {
             history.go();
-            //location.reload();
+            location.reload();
         } else {
             return false;
             location.reload();
         }
-    }
+    }*/
 }
-
-Backbtn();
+Browsebtn();
 </script>

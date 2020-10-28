@@ -37,3 +37,10 @@ setTimeout(function() {
 
 }, 1000);
 </script>
+
+<script>
+        $(window).on('popstate', function(event) {
+        history.go();
+        location.reload();
+    });
+</script>
