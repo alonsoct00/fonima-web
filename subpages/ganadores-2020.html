@@ -95,24 +95,22 @@ $('#Subpage').on('scroll', AOS.refreshHard);
 $('.gif-item').each(function() {
     $(this).on('scroll', AOS.refreshHard);
 });
+
+
 </script>
 <script>
 function goBack() {
     history.go(-1);
 }
-
 $('.SubSubpage_Close').click(function(event) {
     goBack();
     event.preventDefault();
 });
 
-
 function Backbtn() {
-
     $(window).on('pushstate', function(event) {
         goBack();
     });
-
     window.onhashchange = function(e) {
         var whref = window.location.hash;
 
@@ -125,6 +123,5 @@ function Backbtn() {
         }
     }
 }
-
 Backbtn();
 </script>
