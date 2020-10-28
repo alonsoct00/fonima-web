@@ -1740,12 +1740,9 @@ ul.band-links-page li a:focus {
         flex: 0 0 100%;
     }
 
-    .Subpage.Loaded .Subpage__Close, .Subpage.Loaded .SubSubpage_Close {
+    .Subpage.Loaded .Subpage__Close,
+    .Subpage.Loaded .SubSubpage_Close {
         transform: translateX(-8vw) rotate(-90deg);
-    }
-
-    .Subpage__Close, .Subpage.Loaded .SubSubpage_Close {
-        left: 5.2vw;
     }
 
 }
@@ -1760,11 +1757,13 @@ ul.band-links-page li a:focus {
         transform: translateX(-8vw) rotate(-90deg);
     }
 
-    .Subpage.Loaded .Subpage__Close, .Subpage.Loaded .SubSubpage_Close {
+    .Subpage.Loaded .Subpage__Close,
+    .Subpage.Loaded .SubSubpage_Close {
         transform: translateX(-8vw) rotate(-90deg);
     }
 
-    .Subpage__Close, .Subpage.Loaded .SubSubpage_Close {
+    .Subpage__Close,
+    .Subpage.Loaded .SubSubpage_Close {
         left: 5.2vw;
     }
 }
@@ -1798,11 +1797,11 @@ ul.band-links-page li a:focus {
         overflow-x: hidden;
     }
 
-    .sub-page-content{
+    .sub-page-content {
         padding-bottom: 60px;
     }
 
-    .sub-page-content .main-content{
+    .sub-page-content .main-content {
         margin-top: 16px;
     }
 
@@ -1917,11 +1916,11 @@ ul.band-links-page li a:focus {
 
     .fonima-web-page .sub-page-content .block-section .ct-btn .btn-ouline {
         margin-bottom: 20px;
-            width: 90%;
-            display: block;
-            clear: both;
-            float: left;
-            margin: 0px auto 24px auto;
+        width: 90%;
+        display: block;
+        clear: both;
+        float: left;
+        margin: 0px auto 24px auto;
     }
 
     .fonima-web-page .sub-page-content .block-section .main-content .content-info h3,
@@ -1973,16 +1972,17 @@ ul.band-links-page li a:focus {
         position: static !important;
     }
 
-    #about-content .block-section .col-item.colabs.colab-4, #about-content .block-section .col-item.colabs.colab-5 {
+    #about-content .block-section .col-item.colabs.colab-4,
+    #about-content .block-section .col-item.colabs.colab-5 {
         width: auto !important;
         max-width: 50% !important;
     }
 
-    #about-content .block-section .col-item.colabs.colab-4 img{
+    #about-content .block-section .col-item.colabs.colab-4 img {
         width: 40% !important;
     }
 
-    #about-content .block-section .col-item.colabs.colab-5 img{
+    #about-content .block-section .col-item.colabs.colab-5 img {
         width: 40% !important;
     }
 
@@ -2129,7 +2129,7 @@ ul.band-links-page li a:focus {
         font-size: 50%
     }
 
-    #programacion-content-bc>h2>div>span:nth-child(5){
+    #programacion-content-bc>h2>div>span:nth-child(5) {
 
         width: 100%;
     }
