@@ -10,6 +10,10 @@ body {
 #Subpage__Close {
     display: none;
 }
+
+#SubSubpage_Close {
+    display: block !important;
+}
 </style>
 <div class="sub-page-content" id="gifs-bases-2020">
     <h2>
@@ -52,36 +56,31 @@ body {
         <!--<li><a href="#/seleccion-2020">Ganadores 2020</a> <span>X</span></li>-->
     </ul>
 </div>
-<button class="SubSubpage_Close" id="SubSubpage_Close"><span>X</span> back</button>
 <script>
-function goBack() {
-    history.go(-1);
-}
 
-$('.SubSubpage_Close').click(function(event) {
-    goBack();
+$('.SubSubpage_Close').click(function() {
+    history.go(-1);
     event.preventDefault();
 });
 
-
-function Backbtn() {
-
-    $(window).on('pushstate', function(event) {
-        goBack();
+function Browsebtn() {
+    $(window).on('pushstate', function() {
+        history.go();
     });
-
+    $(window).on('popstate', function() {
+        history.go();
+    });
     window.onhashchange = function(e) {
         var whref = window.location.hash;
 
         if (window.location.hash == whref) {
             history.go();
-            //location.reload();
+            location.reload();
         } else {
             return false;
             location.reload();
         }
     }
 }
-
-Backbtn();
+Browsebtn();
 </script>
