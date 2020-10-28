@@ -314,14 +314,30 @@ jQuery(function($) {
         }
     }
 
-    function _HideLogo(){
-         var divScrollerTop = $("#Subpage").scrollTop();
-         //console.group(divScrollerTop);
-         if (divScrollerTop === 0) {
+    function _HideLogo() {
+        var divScrollerTop = $("#Subpage").scrollTop();
+        //console.group(divScrollerTop);
+        if (divScrollerTop === 0) {
             $('#HomeUi__Header').show();
         } else {
             $('#HomeUi__Header').hide();
         }
+    }
+
+    function _AutoplayVideo() {
+            $('video').each(function() {
+                if ($(this).visible(true)) {
+                    $(this)[0].play();
+                } else {
+                    $(this)[0].pause();
+                }
+            });
+    }
+
+    function _NoAutoplay() {
+        $('video').each(function() {
+            $(this).removeAttr('autoplay');
+        });
     }
 
     var width = $(window).width();
@@ -329,8 +345,12 @@ jQuery(function($) {
         $('#Subpage').scroll(function() {
             _GetScrollerEndPoint();
             _HideLogo();
+            _NoAutoplay();
         });
-    } else {}
+    } else {
+        _AutoplayVideo();
+
+    }
 
 });
 

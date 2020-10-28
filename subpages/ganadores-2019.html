@@ -109,15 +109,7 @@ $('.gif-item').each(function() {
     $(this).on('scroll', AOS.refreshHard);
 });
 
-$('#Subpage').scroll(function() {
-    $('video').each(function() {
-        if ($(this).visible(true)) {
-            $(this)[0].play();
-        } else {
-            $(this)[0].pause();
-        }
-    })
-});
+
 </script>
 <script>
 function goBack() {
