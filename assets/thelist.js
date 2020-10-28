@@ -324,35 +324,15 @@ jQuery(function($) {
         }
     }
 
-    function _AutoplayVideo() {
-            $('video').each(function() {
-                if ($(this).visible(true)) {
-                    $(this)[0].play();
-                } else {
-                    $(this)[0].pause();
-                }
-            });
-    }
-
-    function _NoAutoplay() {
-        $('video').each(function() {
-            $(this).removeAttr('autoplay');
-        });
-    }
-
     var width = $(window).width();
     if (width <= 767) {
         $('#Subpage').scroll(function() {
             _GetScrollerEndPoint();
             _HideLogo();
         });
-    } else {
-        _AutoplayVideo();
-
-    }
+    } else {}
 
 });
-
 
 
 AOS.init();

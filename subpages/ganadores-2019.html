@@ -20,7 +20,7 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="giftem1 gif-item even-item">
-                <video class="video" poster="https://dummyimage.com/600x320/d4d4d4/000000.gif&text=video-poster 600x300" preload playsinline muted loop controls>
+                <video class="video" poster="https://dummyimage.com/600x320/d4d4d4/000000.gif&text=video-poster 600x300" autoplay preload playsinline muted loop controls>
                     <source src="assets/videos/1-Diablito.mp4" type="video/mp4">
                 </video>
                 <p clas="txt-v-credit">
@@ -34,7 +34,7 @@
                 </video>
                 <p clas="txt-v-credit">
                     2do lugar · Oscar Muro · “Fonimo” <br />
-                    Música: ### 
+                    Música: ###
                 </p>
             </div>
         </div>
@@ -45,7 +45,7 @@
                 </video>
                 <p clas="txt-v-credit">
                     3er lugar · Lorem Ipsum Dolor · “THSBR-x-romtrademark” <br />
-                    Música: ### 
+                    Música: ###
                 </p>
             </div>
             <div class="gif-item odd-item" data-aos="flip-right">
@@ -54,7 +54,7 @@
                 </video>
                 <p clas="txt-v-credit">
                     4to lugar · Isabel Gaspar · “Sonidos de la Cabaña” <br />
-                    Música: ### 
+                    Música: ###
                 </p>
             </div>
         </div>
@@ -65,7 +65,7 @@
                 </video>
                 <p clas="txt-v-credit">
                     5to lugar · Frida Ram · “Hangover” <br />
-                    Música: ### 
+                    Música: ###
                 </p>
             </div>
         </div>
@@ -83,17 +83,20 @@
 <script type="text/javascript">
 AOS.init();
 setTimeout(function() {
-    $('.giftem1').addClass('flip-this');
-    //$('.giftem2').attr('data-aos', 'flip-right');
-    AOS.refreshHard
-}, 300);
+    $('.giftem1, .gifitem2').addClass('flip-this');
+}, 1000);
 
 $('#Subpage').on('scroll', AOS.refreshHard);
 
-$('.gif-item').each(function() {
-    $(this).on('scroll', AOS.refreshHard);
+$('#Subpage').scroll(function() {
+    $('.gif-item video.video').each(function() {
+        if ($(this).visible(true)) {
+            $(this)[0].play();
+        } else {
+            $(this)[0].pause();
+        }
+    });
 });
-
 
 </script>
 <script>
