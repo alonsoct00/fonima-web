@@ -925,7 +925,7 @@ a.btn.btn-ouline:focus {
         left: 50%;
         white-space: nowrap;
         transform: translate3d(-50%, -50%, 0);
-        content: 'Please rotate your device';
+        content: 'Resolución no compatible con el sitio...';
         color: #000;
         z-index: 99999;
     }
@@ -1157,6 +1157,10 @@ a.btn.btn-ouline:focus {
     text-decoration: none;
 }
 
+#Subpage #subpage-menu-content a:hover {
+    font-weight: 700;
+}
+
 .sub-page-content .main-content {
     margin-top: 40px;
 }
@@ -1164,6 +1168,7 @@ a.btn.btn-ouline:focus {
 .ct-btn {
     display: flex;
     flex-direction: row;
+    margin-top: 24px;
 }
 
 .ct-btn>a {
@@ -1176,6 +1181,7 @@ a.btn.btn-ouline:focus {
     clear: both;
     margin: 20px auto;
     width: auto;
+    height: auto;
 }
 
 .sub-page-content .media-content.video-container video {
@@ -1183,7 +1189,7 @@ a.btn.btn-ouline:focus {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    height: auto;
+    min-height: 600px;
 }
 
 
@@ -1203,6 +1209,13 @@ a.btn.btn-ouline:focus {
     height: 30px;
     padding: 0px;
     margin-right: 15px;
+}
+
+#about-integrantes.block-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: normal;
+    justify-content: space-between;
 }
 
 #about-content .team-item ul.team-social-list li:last-child {
@@ -1227,7 +1240,9 @@ ul.team-social-list li a:focus {
     filter: opacity(0.5);
 }
 
-
+#about-content .col-item.colabs a:hover, #about-content .col-item.aliadosimg a:hover {
+    filter: opacity(0.5);
+}
 #about-content .team-item ul.team-social-list li a img {
     width: 100%;
     display: block;
@@ -1273,12 +1288,23 @@ ul.team-social-list li a:focus {
     align-items: center;
 }
 
+.hidden-content {
+    display: none !important;
+}
+
 .col-item.colabs.colab-4 img {
     width: 50% !important;
 }
 
 .col-item.colabs.colab-5 img {
     width: 20% !important;
+}
+
+
+.col-item.desactived-item {
+    opacity: 0.2;
+    cursor: not-allowed !important;
+    z-index: -1;
 }
 
 #about-colaboradores .colabs img {
@@ -1432,7 +1458,6 @@ ul.team-social-list li a:focus {
     opacity: 0.2;
     cursor: not-allowed !important;
     z-index: -1;
-    filter: contrast(0.5) blur(1px);
 }
 
 #gifs-content .block-section#gifs-wrapper .col-item .img-item {
@@ -1487,11 +1512,6 @@ ul.team-social-list li a:focus {
     grid-area: odd-item;
     position: relative;
     bottom: 40px;
-}
-
-
-#gifs-bases-2020 #bases2020-text {
-    padding-left: 40px;
 }
 
 
@@ -1693,6 +1713,7 @@ ul.band-links-page li a:focus {
     .ct-btn {
         display: flex;
         flex-direction: row;
+        margin-top: 24px;
     }
 
     .ct-btn>a {
@@ -2029,6 +2050,10 @@ ul.band-links-page li a:focus {
         width: 50%;
     }
 
+    #conciertos-content > h2 > div > span:nth-child(10) {
+        width: 24%;
+    }
+
     #conciertos-content .team-item {
         display: flex;
         margin-bottom: 32px;
@@ -2123,7 +2148,7 @@ ul.band-links-page li a:focus {
     }
 }
 
-@media only screen and (max-device-width : 320px) {
+@media only screen and (max-device-width : 370px) {
 
     html {
         font-size: 50%
@@ -2131,6 +2156,34 @@ ul.band-links-page li a:focus {
 
     #programacion-content-bc>h2>div>span:nth-child(5) {
 
+        width: 52%;
+    }
+
+    .fonima-web-page .TheList .TheList__Title {
         width: 100%;
+    }
+
+    .fonima-web-page .fonima-ui-custom .TheList .TheList__Title {
+        font-size: 30px;
+        font-size: 3rem;
+    }
+
+    #programacion-content-bc>div>div:nth-child(3)>div.main-content>div:nth-child(1)>h3 {
+        max-width: 100%;
+        font-size: 24px;
+        font-size: 2.4rem;
+    }
+
+    #conciertos-content > h2 > div > span:nth-child(10) {
+        width: 23%;
+    }
+
+    .Subpage.Loaded .SubSubpage_Close {
+        left: 5px;
+    }
+
+    .sub-subtitle, h3, h4 {
+        font-size: 20px;
+        font-size: 2rem;
     }
 }
