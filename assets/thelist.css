@@ -1872,6 +1872,15 @@ ul.band-links-page li a:focus {
         font-size: 2.8rem;
     }
 
+    .sub-page-content .media-content.video-container video {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        float: none;
+    }
+
     .footer-fonca {
         display: block;
         clear: both;
