@@ -104,32 +104,28 @@ $('#Subpage').scroll(function() {
 </script>
 <script>
 
-$('.SubSubpage_Close').click(function(event) {
+$('.SubSubpage_Close').click(function() {
     history.go(-1);
-    location.reload();
     event.preventDefault();
 });
 
 function Browsebtn() {
-    $(window).on('pushstate', function(event) {
+    $(window).on('pushstate', function() {
         history.go();
-        location.reload();
     });
-    $(window).on('popstate', function(event) {
+    $(window).on('popstate', function() {
         history.go();
-        location.reload();
     });
-    /*window.onhashchange = function(e) {
+    window.onhashchange = function(e) {
         var whref = window.location.hash;
 
         if (window.location.hash == whref) {
             history.go();
-            location.reload();
         } else {
             return false;
             location.reload();
         }
-    }*/
+    }
 }
 Browsebtn();
 </script>
