@@ -1182,6 +1182,7 @@ a.btn.btn-ouline:focus {
     margin: 20px auto;
     width: auto;
     height: auto;
+    position: relative;
 }
 
 .sub-page-content .media-content.video-container video {
@@ -1190,6 +1191,7 @@ a.btn.btn-ouline:focus {
     width: 100%;
     height: 100%;
     min-height: 600px;
+    float: none;
 }
 
 
@@ -1240,9 +1242,11 @@ ul.team-social-list li a:focus {
     filter: opacity(0.5);
 }
 
-#about-content .col-item.colabs a:hover, #about-content .col-item.aliadosimg a:hover {
+#about-content .col-item.colabs a:hover,
+#about-content .col-item.aliadosimg a:hover {
     filter: opacity(0.5);
 }
+
 #about-content .team-item ul.team-social-list li a img {
     width: 100%;
     display: block;
@@ -1560,6 +1564,7 @@ ul.team-social-list li a:focus {
     clear: both;
     margin: 20px auto;
     width: auto;
+    position: relative;
 }
 
 #conciertos-content .media-content.video-container video {
@@ -1781,11 +1786,6 @@ ul.band-links-page li a:focus {
     .Subpage.Loaded .Subpage__Close,
     .Subpage.Loaded .SubSubpage_Close {
         transform: translateX(-8vw) rotate(-90deg);
-    }
-
-    .Subpage__Close,
-    .Subpage.Loaded .SubSubpage_Close {
-        left: 5.2vw;
     }
 }
 
@@ -2050,7 +2050,7 @@ ul.band-links-page li a:focus {
         width: 50%;
     }
 
-    #conciertos-content > h2 > div > span:nth-child(10) {
+    #conciertos-content>h2>div>span:nth-child(10) {
         width: 24%;
     }
 
@@ -2175,7 +2175,7 @@ ul.band-links-page li a:focus {
         font-size: 2.4rem;
     }
 
-    #conciertos-content > h2 > div > span:nth-child(10) {
+    #conciertos-content>h2>div>span:nth-child(10) {
         width: 23%;
     }
 
@@ -2183,7 +2183,9 @@ ul.band-links-page li a:focus {
         left: 0px;
     }
 
-    .sub-subtitle, h3, h4 {
+    .sub-subtitle,
+    h3,
+    h4 {
         font-size: 20px;
         font-size: 2rem;
     }
