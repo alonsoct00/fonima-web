@@ -4,21 +4,21 @@
     </h2>
     <div class="block-section" id="prog-wrapper">
         <div class="row">
-            <div class="col-item">
+            <div class="col-item to-flip">
                 <a href="#/programacion-bc" id="prog-bc">
                     <div class="bg-item">
                         <h3>Baja California (BC)</h3>
                     </div>
                 </a>
             </div>
-            <div class="col-item">
+            <div class="col-item to-flip">
                 <a href="#/programacion-cdmx" id="prog-cdmx">
                     <div class="bg-item">
                         <h3>Ciudad de México (CDMX)</h3>
                     </div>
                 </a>
             </div>
-            <div class="col-item">
+            <div class="col-item to-flip">
                 <a href="#/programacion-trc" id="prog-trc">
                     <div class="bg-item">
                         <h3>Torreón (TRC)</h3>
@@ -28,3 +28,12 @@
         </div>
     </div>
 </div>
+<script>
+setTimeout(function() {
+
+    $('.col-item.to-flip').each(function() {
+        $(this).addClass('flip-this');
+    });
+
+}, 1000);
+</script>

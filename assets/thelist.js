@@ -15,13 +15,14 @@ jQuery(function($) {
         $Subpage = $('#Subpage'),
         $SubpageContent = $('#Subpage__Content'),
         $SubpageClose = $('#Subpage__Close'),
+        $HomeAnchor = $('#home-anchor'),
         $Images;
 
     $Body.css('background', $TheList.find('[data-color]').eq(0).attr('data-color'));
     $Window.on('load', function() {
-        setTimeout(function() { $Border.removeClass('Faded'); }, 2000);
-        setTimeout(function() { $Logo.removeClass('Dark'); }, 2500);
-        setTimeout(_DeepLink, 3000);
+        setTimeout(function() { $Border.removeClass('Faded'); }, 900);
+        setTimeout(function() { $Logo.removeClass('Dark'); }, 1000);
+        setTimeout(_DeepLink, 1000);
 
     });
 
@@ -85,14 +86,14 @@ jQuery(function($) {
 
         if (Href.substr(0, 2) == '#/') {
             if ($Subpage.hasClass('Loaded')) {
-                $Subpage.animate({ opacity: 0 }, 500, function() {
+                $Subpage.animate({ opacity: 0 }, 300, function() {
                     $Subpage[0].scrollTop = 0;
                     $.get('subpages/' + Href.replace('#/', '') + '.html', function(Reply) {
                         $SubpageContent.html(Reply);
                         $SubpageContent.find('h2 > div').each(function() {
                             var Chars = $.trim($(this).html()).split("");
                             $(this).html('<span>' + Chars.join('</span><span>') + '</span>');
-                            $Subpage.animate({ opacity: 1 }, 500);
+                            $Subpage.animate({ opacity: 1 }, 300);
                         });
                         var $Subpageid = $Subpage.find('.sub-page-content').prop('id');
                         $Subpage.addClass($Subpageid);
@@ -118,12 +119,12 @@ jQuery(function($) {
                 $Subpage[0].scrollTop = 0;
                 setTimeout(function() {
                     $Body.css('overflow', 'hidden');
-                    $Subpage.animate({ opacity: 1 }, 500, function() {
+                    $Subpage.animate({ opacity: 1 }, 300, function() {
                         $Subpage.addClass('Loaded');
                     });
                     _HeaderAnim();
                     _bgSubPage();
-                }, 900);
+                }, 500);
             }
             return false;
         }
@@ -163,14 +164,14 @@ jQuery(function($) {
             if (Href.substr(0, 2) == '#/') {
                 window.location.hash = Href;
                 if ($Subpage.hasClass('Loaded')) {
-                    $Subpage.animate({ opacity: 0 }, 500, function() {
+                    $Subpage.animate({ opacity: 0 }, 300, function() {
                         $Subpage[0].scrollTop = 0;
                         $.get('subpages/' + Href.replace('#/', '') + '.html', function(Reply) {
                             $SubpageContent.html(Reply);
                             $SubpageContent.find('h2 > div').each(function() {
                                 var Chars = $.trim($(this).html()).split("");
                                 $(this).html('<span>' + Chars.join('</span><span>') + '</span>');
-                                $Subpage.animate({ opacity: 1 }, 500, function() {
+                                $Subpage.animate({ opacity: 1 }, 300, function() {
                                     _HeaderAnim();
                                 });
                             });
@@ -200,12 +201,12 @@ jQuery(function($) {
                     $Subpage[0].scrollTop = 0;
                     setTimeout(function() {
                         $Body.css('overflow', 'hidden');
-                        $Subpage.animate({ opacity: 1 }, 500, function() {
+                        $Subpage.animate({ opacity: 1 }, 300, function() {
                             $Subpage.addClass('Loaded');
                         });
                         _HeaderAnim();
                         _bgSubPage();
-                    }, 900);
+                    }, 500);
                 }
                 return false;
             }
@@ -216,7 +217,26 @@ jQuery(function($) {
             $Subpage.removeClass('Loaded');
             var $Subpageid = $('.sub-page-content').prop('id');
             $Subpage.removeClass($Subpageid);
-            $Subpage.animate({ opacity: 0 }, 500, function() {
+            $Subpage.animate({ opacity: 0 }, 300, function() {
+                $Subpage[0].scrollTop = 0;
+                $SubpageContent.html('');
+                $Border.removeClass('Faded');
+                $UI.removeClass('Dark');
+                $Logo.removeClass('Active');
+                $UI.removeClass('Subsection');
+                $Body.css('overflow', 'auto');
+                $Subpage.css('display', 'none');
+                $(".footer-fonca").fadeIn();
+            });
+            return false;
+        });
+
+        $HomeAnchor.on('click', function() {
+            window.location.hash = '';
+            $Subpage.removeClass('Loaded');
+            var $Subpageid = $('.sub-page-content').prop('id');
+            $Subpage.removeClass($Subpageid);
+            $Subpage.animate({ opacity: 0 }, 300, function() {
                 $Subpage[0].scrollTop = 0;
                 $SubpageContent.html('');
                 $Border.removeClass('Faded');
@@ -294,10 +314,21 @@ jQuery(function($) {
         }
     }
 
+    function _HideLogo(){
+         var divScrollerTop = $("#Subpage").scrollTop();
+         //console.group(divScrollerTop);
+         if (divScrollerTop === 0) {
+            $('#HomeUi__Header').show();
+        } else {
+            $('#HomeUi__Header').hide();
+        }
+    }
+
     var width = $(window).width();
     if (width <= 767) {
         $('#Subpage').scroll(function() {
             _GetScrollerEndPoint();
+            _HideLogo();
         });
     } else {}
 
