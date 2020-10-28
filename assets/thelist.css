@@ -2145,6 +2145,7 @@ ul.band-links-page li a:focus {
 
     .Subpage.Loaded .SubSubpage_Close {
         transform: translateX(-8vw) rotate(-90deg);
+        left: 0px;
     }
 }
 

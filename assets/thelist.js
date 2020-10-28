@@ -345,7 +345,6 @@ jQuery(function($) {
         $('#Subpage').scroll(function() {
             _GetScrollerEndPoint();
             _HideLogo();
-            _NoAutoplay();
         });
     } else {
         _AutoplayVideo();
