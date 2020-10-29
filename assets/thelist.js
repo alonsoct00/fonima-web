@@ -132,6 +132,37 @@ jQuery(function($) {
 
 
 
+    function Browsebtn() {
+        $(window).on('pushstate', function() {
+            //history.go();
+            _DeepLink();
+            _bgSubPage();
+
+        });
+        $(window).on('popstate', function() {
+            //history.go();
+            _DeepLink();
+            _bgSubPage();
+        });
+        /*window.onhashchange = function(e) {
+            var whref = window.location.hash;
+
+            if (window.location.hash == whref) {
+                _DeepLink();
+            } else {
+                return false;
+                //location.reload();
+            }
+        }*/
+    }
+    Browsebtn();
+
+    $('.SubSubpage_Close').click(function() {
+        //history.go(-1);
+        _DeepLink();
+        _bgSubPage();
+    });
+
 
 
 
