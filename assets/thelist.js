@@ -158,7 +158,7 @@ jQuery(function($) {
     Browsebtn();
 
     $('.SubSubpage_Close').click(function() {
-        //history.go(-1);
+        history.go(-1);
         _DeepLink();
         _bgSubPage();
     });
