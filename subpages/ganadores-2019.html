@@ -69,7 +69,7 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
-                <video class="video" poster="assets/videos/frida.jpg" preload="auto" playsinline muted loop controls>
+                <video class="video" poster="assets/videos/frida.jpg" preload="auto" autplay playsinline muted loop controls>
                     <source src="assets/videos/5-FRIDA_RAM_hangover.mp4" type="video/mp4">
                 </video>
                 <p clas="txt-v-credit">
@@ -101,17 +101,16 @@ function screenClass() {
         $('#Subpage').scroll(function() {
             $('.gif-item video.video').each(function() {
                 if ($(this).visible(true)) {
-                    $(this)[0].play();
+                    $(this).get(0).play();
                 } else {
-                    $(this)[0].pause();
+                    $(this).get(0).pause();
                 }
             });
         });
     } else {
         $('.gif-item video.video').each(function() {
-            $(this).attr('autoplay');
+            $(this).removeAttr('autoplay');
             $(this).removeAttr('loop');
-
         });
     }
 }
