@@ -14,6 +14,13 @@ body {
 #SubSubpage_Close {
     display: block !important;
 }
+
+.bg-10,
+.gifs-bases-2020 {
+    background: var(--bg-gray) url('assets/images/backgrounds/BG-10.png') no-repeat 0px 0px / cover !important;
+    background-blend-mode: hard-light;
+}
+
 </style>
 <div class="sub-page-content" id="gifs-bases-2020">
     <h2>
@@ -56,6 +63,13 @@ body {
         <!--<li><a href="#/seleccion-2020">Ganadores 2020</a> <span>X</span></li>-->
     </ul>
 </div>
+
+<script>
+    $('.SubSubpage_Close').click(function() {
+    var thissubpageid = $('.sub-page-content').prop('id')
+    $("#Subpage").removeClass(thissubpageid);
+});
+</script>
 <!--<script>
 
 /*$('.SubSubpage_Close').click(function() {
