@@ -30,18 +30,26 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="giftem1 gif-item even-item">
-                <video class="video" poster="assets/videos/diablito.jpg" preload="auto" autoplay playsinline muted loop controls>
-                    <source src="assets/videos/1-Diablito.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/diablito.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="assets/videos/1-Diablito.webm" type="video/webm">
+                        <source src="assets/videos/1-Diablito.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     1er lugar · Diablito Colectivo · “Luz Feria” y “Colores sensoriales” <br />
                     Música: Alan Fajardo
                 </p>
             </div>
             <div class="giftem2 gif-item odd-item" data-aos="flip-right">
-                <video class="video" poster="assets/videos/muro.jpg" preload="auto" autoplay playsinline muted loop controls>
-                    <source src="assets/videos/2-OscarMuro-fonimo2.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/muro.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="assets/videos/2-OscarMuro-fonimo2.webm" type="video/webm">
+                        <source src="assets/videos/2-OscarMuro-fonimo2.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     2do lugar · Oscar Muro · “No hay dos iguales” <br />
                     Música: Chirimoyo
@@ -50,18 +58,26 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
-                <video class="video" poster="assets/videos/thsbr.jpg" preload="auto" autoplay playsinline muted loop controls>
-                    <source src="assets/videos/3-THSBR-x-romtrademark.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/thsbr.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="assets/videos/3-THSBR-x-romtrademark.webm" type="video/webm">
+                        <source src="assets/videos/3-THSBR-x-romtrademark.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     3er lugar · THSBR · “Sin nombre” <br />
                     Música: The hazzmattes
                 </p>
             </div>
             <div class="gif-item odd-item" data-aos="flip-right">
-                <video class="video" poster="assets/videos/isabel.jpg" preload="auto" autoplay playsinline muted loop controls>
-                    <source src="assets/videos/4-IsabelGaspar_Isabel_sonidos_de_la_cabana30segMOV.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/isabel.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="assets/videos/4-IsabelGaspar_Isabel_sonidos_de_la_cabana30segMOV.webm" type="video/webm">
+                        <source src="assets/videos/4-IsabelGaspar_Isabel_sonidos_de_la_cabana30segMOV.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     Mención especial · Isabel Gaspar · “Sonidos de la Cabaña” y "Grounding" <br />
                 </p>
@@ -69,9 +85,13 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
-                <video class="video" poster="assets/videos/frida.jpg" preload="auto" autoplay playsinline muted loop controls>
-                    <source src="assets/videos/5-FRIDA_RAM_hangover.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/frida.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="assets/videos/5-FRIDA_RAM_hangover.webm" type="video/webm">
+                        <source src="assets/videos/5-FRIDA_RAM_hangover.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     Mención especial · Frida Ramírez · “Hangover” <br />
                     Música: itz_lmoonz
@@ -96,6 +116,8 @@ setTimeout(function() {
 
 $('#Subpage').on('scroll', AOS.refreshHard);
 
+
+
 function screenClass() {
     if ($(window).innerWidth() > 767) {
         $('#Subpage').scroll(function() {
@@ -110,6 +132,9 @@ function screenClass() {
     } else {
         $('.gif-item video.video').each(function() {
             $(this).removeAttr('loop');
+        });
+        document.querySelector('video').addEventListener('loadstart', function(e) {
+            e.target.controls = true;
         });
     }
 }
