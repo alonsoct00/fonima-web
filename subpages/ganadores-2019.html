@@ -30,18 +30,28 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="giftem1 gif-item even-item">
-                <video class="video" poster="assets/videos/diablito.jpg" autoplay playsinline muted loop controls>
-                    <source src="assets/videos/1-Diablito.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/diablito.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="https://streamable.com/e/2elt9s">
+                        <source src="assets/videos/1-Diablito.webm" type="video/webm">
+                        <source src="assets/videos/1-Diablito.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     1er lugar · Diablito Colectivo · “Luz Feria” y “Colores sensoriales” <br />
                     Música: Alan Fajardo
                 </p>
             </div>
             <div class="giftem2 gif-item odd-item" data-aos="flip-right">
-                <video class="video" poster="assets/videos/muro.jpg" autoplay playsinline autobuffer muted loop controls>
-                    <source src="assets/videos/2-OscarMuro-fonimo2.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/muro.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="https://streamable.com/e/bew5qy">
+                        <source src="assets/videos/2-OscarMuro-fonimo2.webm" type="video/webm">
+                        <source src="assets/videos/2-OscarMuro-fonimo2.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     2do lugar · Oscar Muro · “No hay dos iguales” <br />
                     Música: Chirimoyo
@@ -50,18 +60,27 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
-                <video class="video" poster="assets/videos/thsbr.jpg" playsinline autobuffer muted loop controls>
-                    <source src="assets/videos/3-THSBR-x-romtrademark.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/thsbr.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="https://streamable.com/e/4sxdkh">
+                        <source src="assets/videos/3-THSBR-x-romtrademark.webm" type="video/webm">
+                        <source src="assets/videos/3-THSBR-x-romtrademark.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     3er lugar · THSBR · “Sin nombre” <br />
                     Música: The hazzmattes
                 </p>
             </div>
             <div class="gif-item odd-item" data-aos="flip-right">
-                <video class="video" poster="assets/videos/isabel.jpg" playsinline autobuffer muted loop controls>
-                    <source src="assets/videos/4-IsabelGaspar_Isabel_sonidos_de_la_cabana30segMOV.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/isabel.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="assets/videos/4-IsabelGaspar_Isabel_sonidos_de_la_cabana30segMOV.webm" type="video/webm">
+                        <source src="assets/videos/4-IsabelGaspar_Isabel_sonidos_de_la_cabana30segMOV.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     Mención especial · Isabel Gaspar · “Sonidos de la Cabaña” y "Grounding" <br />
                 </p>
@@ -69,9 +88,14 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
-                <video class="video" poster="assets/videos/frida.jpg" playsinline autobuffer muted loop controls>
-                    <source src="assets/videos/5-FRIDA_RAM_hangover.mp4" type="video/mp4">
-                </video>
+                <div class="video-container">
+                    <video class="video" poster="assets/videos/frida.jpg" preload="auto" autoplay playsinline muted loop controls>
+                        <source src="https://streamable.com/e/ykpfka">
+                        <source src="assets/videos/5-FRIDA_RAM_hangover.webm" type="video/webm">
+                        <source src="assets/videos/5-FRIDA_RAM_hangover.mp4" type="video/mp4">
+                        <p>Your browser cannot play the provided video file.</p>
+                    </video>
+                </div>
                 <p clas="txt-v-credit">
                     Mención especial · Frida Ramírez · “Hangover” <br />
                     Música: itz_lmoonz
@@ -94,49 +118,49 @@ setTimeout(function() {
     $('.giftem1, .gifitem2').addClass('flip-this');
 }, 1000);
 
+$("video").on('click', function() {
+    this.paused ? this.play() : this.pause();
+    return false;
+});
+
 $('#Subpage').on('scroll', AOS.refreshHard);
 
-$('#Subpage').scroll(function() {
-    $('.gif-item video.video').each(function() {
-        if ($(this).visible(true)) {
-            $(this)[0].play();
-        } else {
-            $(this)[0].pause();
-        }
-    });
-});
+function screenClass() {
+    if ($(window).innerWidth() < 767) {
+        alert("Antes de continuar en esta sección de preferencia conecta tu dispositivo a una red Wi-Fi")
+        $('.gif-item video.video').each(function() {
+            $(this).removeAttr('loop');
+            $(this).get(0).pause();
+            //$(this).removeAttr('autoplay');
 
-    $('.SubSubpage_Close').click(function() {
-        var thissubpageid = $('.sub-page-content').prop('id')
-            $("#Subpage").removeClass(thissubpageid);
-    });
+        });
+        document.querySelector('video').addEventListener('loadstart', function(e) {
+            e.target.controls = true;
+        });
 
-</script>
-<!--<script>
+    } else {
 
-/*$('.SubSubpage_Close').click(function() {
-    history.go(-1);
-    event.preventDefault();
-});
-
-function Browsebtn() {
-    $(window).on('pushstate', function() {
-        history.go();
-    });
-    $(window).on('popstate', function() {
-        history.go();
-    });
-    window.onhashchange = function(e) {
-        var whref = window.location.hash;
-
-        if (window.location.hash == whref) {
-            history.go();
-            location.reload();
-        } else {
-            return false;
-            location.reload();
-        }
+        $('#Subpage').scroll(function() {
+            $('.gif-item video.video').each(function() {
+                if ($(this).visible(true)) {
+                    $(this).get(0).play();
+                } else {
+                    $(this).get(0).pause();
+                }
+            });
+        });
     }
 }
-Browsebtn();*/
-</script>-->
+
+screenClass();
+
+$(window).bind('resize', function() {
+    screenClass();
+});
+
+
+$('.SubSubpage_Close').click(function() {
+    var thissubpageid = $('.sub-page-content').prop('id')
+    $("#Subpage").removeClass(thissubpageid);
+});
+</script>

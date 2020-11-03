@@ -1208,8 +1208,8 @@ a.btn {
     display: block;
     clear: both;
     margin: 20px auto;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     position: relative;
 
     video {
@@ -1220,6 +1220,24 @@ a.btn {
         min-height: 600px;
         float: none;
     }
+}
+
+.sub-page-content .video-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.sub-page-content .video-container video,
+.sub-page-content .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #about-content .team-item ul.team-social-list {
@@ -1543,15 +1561,14 @@ ul.team-social-list li a:focus {
         width: 100%;
         max-width: 500px;
         height: auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
 
         img {
             width: 100%;
             height: auto;
         }
-
-        position: relative;
-        width: 100%;
-        height: 100%;
 
         video {
             display: block;
