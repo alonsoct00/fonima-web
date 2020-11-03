@@ -331,8 +331,6 @@ jQuery(function($) {
         }, 200);
     }
 
-
-
     function _GetScrollerEndPoint() {
         var scrollHeight = $("#Subpage").prop('scrollHeight');
         var divHeight = $("#Subpage").height();
