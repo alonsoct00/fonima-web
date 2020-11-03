@@ -50,7 +50,7 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
-                <video class="video" poster="assets/videos/thsbr.jpg" preload="auto" playsinline muted loop controls>
+                <video class="video" poster="assets/videos/thsbr.jpg" preload="auto" autoplay playsinline muted loop controls>
                     <source src="assets/videos/3-THSBR-x-romtrademark.mp4" type="video/mp4">
                 </video>
                 <p clas="txt-v-credit">
@@ -59,7 +59,7 @@
                 </p>
             </div>
             <div class="gif-item odd-item" data-aos="flip-right">
-                <video class="video" poster="assets/videos/isabel.jpg" preload="auto" playsinline muted loop controls>
+                <video class="video" poster="assets/videos/isabel.jpg" preload="auto" autoplay playsinline muted loop controls>
                     <source src="assets/videos/4-IsabelGaspar_Isabel_sonidos_de_la_cabana30segMOV.mp4" type="video/mp4">
                 </video>
                 <p clas="txt-v-credit">
@@ -69,7 +69,7 @@
         </div>
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
-                <video class="video" poster="assets/videos/frida.jpg" preload="auto" autplay playsinline muted loop controls>
+                <video class="video" poster="assets/videos/frida.jpg" preload="auto" autoplay playsinline muted loop controls>
                     <source src="assets/videos/5-FRIDA_RAM_hangover.mp4" type="video/mp4">
                 </video>
                 <p clas="txt-v-credit">
@@ -109,7 +109,6 @@ function screenClass() {
         });
     } else {
         $('.gif-item video.video').each(function() {
-            $(this).removeAttr('autoplay');
             $(this).removeAttr('loop');
         });
     }
