@@ -13,6 +13,12 @@
 #SubSubpage_Close {
     display: block !important;
 }
+
+.bg-9,
+.gifs-ganadores-2019 {
+    background: var(--bg-gray) url('assets/images/backgrounds/BG-9.png') no-repeat 0px 0px / cover !important;
+    background-blend-mode: normal;
+}
 </style>
 <div class="sub-page-content" id="gifs-ganadores-2019">
     <h2>
@@ -99,6 +105,11 @@ $('#Subpage').scroll(function() {
         }
     });
 });
+
+    $('.SubSubpage_Close').click(function() {
+        var thissubpageid = $('.sub-page-content').prop('id')
+            $("#Subpage").removeClass(thissubpageid);
+    });
 
 </script>
 <!--<script>

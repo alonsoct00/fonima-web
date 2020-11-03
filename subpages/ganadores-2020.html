@@ -13,8 +13,13 @@
     display: block !important;
 }
 
+.bg-11,
+.gifs-ganadores-2020 {
+    background: var(--bg-gray) url('assets/images/backgrounds/BG-11.png') no-repeat 0px 0px / cover !important;
+    background-blend-mode: normal;
+}
 </style>
-<div class="sub-page-content" id="gifs-ganadores-2019">
+<div class="sub-page-content" id="gifs-ganadores-2020">
     <h2>
         <div>Ganadores 2020</div>
     </h2>
@@ -101,8 +106,15 @@ $('#Subpage').scroll(function() {
         }
     });
 });
+$('.SubSubpage_Close').click(function() {
+    var thissubpageid = $('.sub-page-content').prop('id')
+    $("#Subpage").removeClass(thissubpageid);
+});
 
 </script>
+
+
+
 <!--<script>
 
 /*$('.SubSubpage_Close').click(function() {
