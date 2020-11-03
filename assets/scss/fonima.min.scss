@@ -1458,9 +1458,12 @@ ul.team-social-list li a:focus {
 }
 
 #programacion-content-trc span.prog-title-img {
-    background: url(../images/iconos/Programacion/TRC-icon.svg) no-repeat 0px 0px / 100%;
+    background: url(../images/iconos/Programacion/TRC-icon.svg) no-repeat 0px 0px/100%;
     display: inline-block;
     margin-left: 16px;
+    height: 80px;
+    position: relative;
+    bottom: 20px;
 }
 
 #programacion-content-cdmx span.prog-title-img {
@@ -1709,6 +1712,10 @@ ul.band-links-page li a:focus {
         font-size: 6rem;
     }
 
+    span.prog-title-img {
+        display: none;
+    }
+
     .fonima-web-page .fonima-ui-custom {
         .TheList__Wrapper {
             padding-bottom: 2vw;
@@ -1838,6 +1845,10 @@ ul.band-links-page li a:focus {
         display: none;
     }
 
+    span.prog-title-img {
+        display: none;
+    }
+
     .Subpage.Loaded {
 
         .Subpage__Close,
@@ -1871,6 +1882,10 @@ ul.band-links-page li a:focus {
                 font-size: 3.8rem;
                 line-height: normal;
             }
+        }
+
+        span.prog-title-img {
+            display: none;
         }
 
         .TheList .TheList__Title {
