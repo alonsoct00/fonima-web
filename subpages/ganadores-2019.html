@@ -19,6 +19,21 @@
     background: var(--bg-gray) url('assets/images/backgrounds/BG-9.png') no-repeat 0px 0px / cover !important;
     background-blend-mode: normal;
 }
+
+.gifs-video-wrapper .gif-item .video-container {
+    padding-bottom: 0px;
+    min-width: 500px;
+    height: 300px;
+}
+
+@media only screen and (max-width : 767px) {
+    .gifs-video-wrapper .gif-item .video-container {
+    padding-bottom: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    height: 300px;
+}
+}
 </style>
 <div class="sub-page-content" id="gifs-ganadores-2019">
     <h2>
@@ -31,9 +46,9 @@
         <div class="row grid-view gifs-video-wrapper">
             <div class="giftem1 gif-item even-item">
                 <div class="video-container">
-                    <video class="video" poster="assets/videos/diablito.jpg" preload="auto" autoplay playsinline muted loop controls>
-                        <source src="assets/videos/1-Diablito.mp4" type="video/mp4">
-                        <source src="assets/videos/1-Diablito.webm" type="video/webm">
+                    <video class="video" poster="assets/videos/diablito.jpg" preload="auto" autoplay loop playsinline muted controls>
+                        <source src="assets/videos/diablito.mp4" type="video/mp4">
+                        <source src="assets/videos/diablito.webm" type="video/webm">
                         <p>Your browser cannot play the provided video file.</p>
                     </video>
                 </div>
@@ -44,9 +59,9 @@
             </div>
             <div class="giftem2 gif-item odd-item" data-aos="flip-right">
                 <div class="video-container">
-                    <video class="video" poster="assets/videos/muro.jpg" preload="auto" autoplay playsinline muted loop controls>
-                        <source src="assets/videos/2-OscarMuro-fonimo2.mp4" type="video/mp4">
-                        <source src="assets/videos/2-OscarMuro-fonimo2.webm" type="video/webm">
+                    <video class="video" poster="assets/videos/muro.jpg" preload="auto" autoplay loop playsinline muted controls>
+                        <source src="assets/videos/muro.mp4" type="video/mp4">
+                        <source src="assets/videos/muro.webm" type="video/webm">
                         <p>Your browser cannot play the provided video file.</p>
                     </video>
                 </div>
@@ -59,9 +74,9 @@
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
                 <div class="video-container">
-                    <video class="video" poster="assets/videos/thsbr.jpg" preload="auto" autoplay playsinline muted loop controls>
-                        <source src="assets/videos/3-THSBR-x-romtrademark.mp4" type="video/mp4">
-                        <source src="assets/videos/3-THSBR-x-romtrademark.webm" type="video/webm">
+                    <video class="video" poster="assets/videos/thsbr.jpg" preload="auto" autoplay loop playsinline muted controls>
+                        <source src="assets/videos/main.mp4" type="video/mp4">
+                        <source src="assets/videos/main.webm" type="video/webm">
                         <p>Your browser cannot play the provided video file.</p>
                     </video>
                 </div>
@@ -72,9 +87,9 @@
             </div>
             <div class="gif-item odd-item" data-aos="flip-right">
                 <div class="video-container">
-                    <video class="video" poster="assets/videos/isabel.jpg" preload="auto" autoplay playsinline muted loop controls>
-                        <source src="assets/videos/4-IsabelGaspar_Isabel_sonidos_de_la_cabana30segMOV.mp4" type="video/mp4">
-                        <source src="assets/videos/4-IsabelGaspar_Isabel_sonidos_de_la_cabana30segMOV.webm" type="video/webm">
+                    <video class="video" poster="assets/videos/isabel.jpg" preload="auto" autoplay loop playsinline muted controls>
+                        <source src="assets/videos/isabel.mp4" type="video/mp4">
+                        <source src="assets/videos/isabel.webm" type="video/webm">
                         <p>Your browser cannot play the provided video file.</p>
                     </video>
                 </div>
@@ -86,9 +101,9 @@
         <div class="row grid-view gifs-video-wrapper">
             <div class="gif-item even-item" data-aos="flip-left">
                 <div class="video-container">
-                    <video class="video" poster="assets/videos/frida.jpg" preload="auto" autoplay playsinline muted loop controls>
-                        <source src="assets/videos/5-FRIDA_RAM_hangover.mp4" type="video/mp4">
-                        <source src="assets/videos/5-FRIDA_RAM_hangover.webm" type="video/webm">
+                    <video class="video" poster="assets/videos/frida.jpg" preload="auto" autoplay loop playsinline muted controls>
+                        <source src="assets/videos/frida.mp4" type="video/mp4">
+                        <source src="assets/videos/frida.webm" type="video/webm">
                         <p>Your browser cannot play the provided video file.</p>
                     </video>
                 </div>
@@ -109,7 +124,9 @@
     </ul>
 </div>
 <script type="text/javascript">
+
 AOS.init();
+
 setTimeout(function() {
     $('.giftem1, .gifitem2').addClass('flip-this');
 }, 1000);
@@ -125,19 +142,14 @@ function screenClass() {
             $(this).removeAttr('loop');
             //$(this).get(0).pause();
             //$(this).removeAttr('autoplay');
-    $("video").on('click', function() {
-    this.paused ? this.play() : this.pause();
-    return false;
-});
+            $("video").on('click', function() {
+                this.paused ? this.play() : this.pause();
+                return false;
+            });
 
         });
 
-    } else {
-
-        document.querySelector('video').addEventListener('loadstart', function(e) {
-            e.target.controls = true;
-        });
-    }
+    } else {}
 }
 
 screenClass();
