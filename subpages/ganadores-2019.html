@@ -119,9 +119,10 @@ setTimeout(function() {
     return false;
 });
 */
-/*document.querySelector('video').addEventListener('loadstart', function(e) {
+
+document.querySelector('video').addEventListener('loadstart', function(e) {
     e.target.controls = true;
-});*/
+});
 
 $('#Subpage').on('scroll', AOS.refreshHard);
 
@@ -135,18 +136,7 @@ function screenClass() {
 
         });
 
-    } else {
-
-        $('#Subpage').scroll(function() {
-            $('.gif-item video.video').each(function() {
-                if ($(this).visible(true)) {
-                    $(this).get(0).play();
-                } else {
-                    $(this).get(0).pause();
-                }
-            });
-        });
-    }
+    } else {}
 }
 
 screenClass();
