@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "sass-compiler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -w assets/scss -o assets/css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alonsoct00/fonima-web.git"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Alonso Caballero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alonsoct00/fonima-web/issues"
+  },
+  "homepage": "https://github.com/alonsoct00/fonima-web#readme"
+}
