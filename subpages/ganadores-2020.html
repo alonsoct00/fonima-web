@@ -147,10 +147,10 @@ function screenClass() {
     if ($(window).innerWidth() < 767) {
 
         var alerted = localStorage.getItem('alerted') || '';
-            if (alerted != 'yes') {
+        if (alerted != 'yes') {
             alert("Antes de continuar en esta sección de preferencia conecta tu dispositivo a una red Wi-Fi");
-             localStorage.setItem('alerted','yes');
-            }
+            localStorage.setItem('alerted', 'yes');
+        }
         $('.gif-item video.video').each(function() {
             $(this).removeAttr('loop');
             //$(this).get(0).pause();
